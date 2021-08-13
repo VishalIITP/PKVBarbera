@@ -1,0 +1,277 @@
+{% extends "base.htm" %}
+{% load static%}
+
+{% block title%}Home-Barbera{% endblock title%}
+
+
+
+
+{% block activatehomepage %}active{% endblock activatehomepage%}
+
+
+
+{%block csslink%} 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+{% endblock csslink%}
+
+
+
+{% block body%}
+
+<!-- {% if Ratesuccess%} -->
+<!-- <div style="margin: 0px;" class="alert alert-success d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+        <use xlink:href="#check-circle-fill" />
+    </svg>
+    <div>
+        <font style="font-size: 12.5px;">Thanks {{feedbacker|upper}} for your feedback!! To check more costumer reviews
+            click <a style="text-decoration: none; color:black" href="/reviews">here</a></font>
+    </div>
+</div>
+
+
+{% endif%} -->
+
+<!-- {% if successNewUser %}
+<div style="margin: 0px;" class="alert alert-success d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+        <use xlink:href="#check-circle-fill" />
+    </svg>
+    <div>
+        <font style="font-size: 12.5px; text-decoration: none; color:black">User Created Successfully
+            click to <button class="btn btn-outline-success" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#loginModal">
+                Login
+            </button></a></font>
+    </div>
+</div>
+
+
+
+{% endif %}  -->
+
+ 
+
+<!-- 
+<div id="carouselExampleFade" class="carousel slide carousel-slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active" data-bs-interval="1500">
+
+            <img src="../../static/images/markus-winkler-wCQAhFUB1BY-unsplash.jpg" height="200px" class="d-block w-100"
+                alt="...">
+
+
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="../../static/images/13226.jpg" height="200px" class="d-block w-100" alt="...">
+
+
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="../../static/images/14732.jpg" height="200px" class="d-block w-100" alt="...">
+
+
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <section id="men">
+        <h2>Men</h2>
+        <div class="row">
+            {% for x in services %}
+            {% if x.serviceCategory == "men" %}
+
+            <div class="col-sm-4 ">
+                <div class="card text-white bg-dark  my-2">
+                    <img src="media/{{x.serviceImage}}" class="card-img-top" height="190px" width="190px" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">{{x.serviceName}}</h3>
+                        <p class="card-text">{{x.serviceDesc}} </p>
+                        <button class="btn btn-primary addtoCartbut" id="servmen{{forloop.counter}}"
+                            onclick="cartFunc(this)">Add
+                            to Cart</button>
+                        <p class="card-text my-1">{{x.servicePrice}}</p>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+
+            {% endfor %}
+        </div>
+    </section>
+
+
+    <section id="women">
+        <h2>Women</h2>
+        <div class="row">
+            {% for x in services %}
+            {% if x.serviceCategory == "women" %}
+
+            <div class="col-sm-4 ">
+                <div class="card text-white bg-dark  my-2">
+                    <img src="media/{{x.serviceImage}}" class="card-img-top" height="190px" width="190px" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">{{x.serviceName}}</h3>
+                        <p class="card-text">{{x.serviceDesc}} </p>
+                        <button class="btn btn-primary addtoCartbut" id="servwomen{{forloop.counter}}"
+                            onclick="cartFunc(this)">Add
+                            to Cart</button>
+                        <p class="card-text my-1">{{x.servicePrice}}</p>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+
+
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="kids">
+        <h2>Kids</h2>
+        <div class="row">
+            {% for x in services %}
+            {% if x.serviceCategory == "kids" %}
+
+            <div class="col-sm-4 ">
+                <div class="card text-white bg-dark  my-2">
+                    <img src="media/{{x.serviceImage}}" class="card-img-top" height="190px" width="190px" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">{{x.serviceName}}</h3>
+                        <p class="card-text">{{x.serviceDesc}} </p>
+                        <button class="btn btn-primary addtoCartbut" id="servkids{{forloop.counter}}"
+                            onclick="cartFunc(this)">Add
+                            to Cart</button>
+                        <p class="card-text my-1">{{x.servicePrice}}</p>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+
+
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+<hr>
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            Go To:
+        </div>
+        <div class="col">
+            <a class="goto" href="#men">Men</a>
+        </div>
+        <div class="col">
+            <a class="goto" href="#women"> Women</a>
+
+        </div>
+        <div class="col">
+            <a class="goto" href="#kids">Kids</a>
+        </div>
+    </div>
+</div>
+<hr>
+
+
+
+{% endblock body%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block rateUs %}
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <a class="goto" id="rate" href="/rate">Rate-Us</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock rateUs%}

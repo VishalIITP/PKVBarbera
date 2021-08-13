@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <title>{% block title%}{% endblock title%}</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="icon" href="https://barbera.netlify.app/nikita.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    {%block csslink%}{% endblock csslink%}
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+    <link href="{% static 'css/basestyle.css' %}" rel="stylesheet">
+
+    {%block scriptlink%}{% endblock scriptlink%}
+
+
+
+
+</head>
+
+<body>
+
+
+    <!--Back id="belowNavMessagesBack"To top-->
+    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <a href="/homepage"><img src="https://barbera.netlify.app/nikita.jpeg" alt="logo" class="logo"></a>
+
+
+    <!--Navigation Bar-->
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <!--<div class="logo"><img src="https://barbera.netlify.app/nikita.jpeg" alt="logo"></div>-->
+            <div class="nav_icon {% block activateHome %}{% endblock activateHome %}">
+                <!-- <img src="https://us.123rf.com/450wm/fokaspokas/fokaspokas1804/fokaspokas180400063/98532451-a-house-icon-on-white-icon-on-black-background-.jpg?ver=6" alt="Home" id="home_icon">-->
+                <li><a href="/homepage">Home</a></li>
+            </div>
+            <hr>
+            <div class="nav_icon {% block activateServicesPage %}{% endblock activateServicesPage %}">
+                <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfglX2FUbxIF11BZiecgectkGhkjPsr4WFu2lUPEtYTIXt-Iq6uxultTxlyUZfl-SUHPY&usqp=CAU" alt="Services" id="services_icon">-->
+                <li><a href="/servicesPage">Services</a></li>
+            </div>
+            <hr>
+            <div class="nav_icon {% block activateTipsPage %}{% endblock activateTipsPage %}">
+                <!-- <img src="https://i.pinimg.com/originals/db/9c/66/db9c669ece4c0168bc0fc2076960a3b8.png" alt="Tips" id="tips_icon" style="margin-right: 4px;"> -->
+                <li><a href="/tipsPage">Tips</a></li>
+            </div>
+            <hr>
+            <div class="nav_icon {% block activateCart %}{% endblock activateCart %}">
+                <!-- <img src="https://thumbs.dreamstime.com/b/shopping-icon-shopping-cart-icon-dark-background-simple-vector-icon-shopping-icon-shopping-cart-icon-dark-background-116659167.jpg" alt="Cart" id="cart_icon" style="margin-right: 4px;"> -->
+                <li><a href="#">Cart</a></li>
+            </div>
+            <hr>
+            <div class="nav_icon {% block activateAboutUs %}{% endblock activateAboutUs %}">
+                <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8sksWlhY2C3peMqclAzuHm4z0-_kv7IR7rQ&usqp=CAU" alt="AboutUs" id="about_icon">-->
+                <li><a href="/aboutUs">About Us</a></li>
+            </div>
+            <hr>
+            <div class="nav_icon {% block activateContactUs %}{% endblock activateContactUs %}">
+                <!-- <img src="https://i.pinimg.com/originals/22/52/5e/22525e1af533b224bd2314e1126ead4f.jpg" alt="Contact" id="contact_icon">-->
+                <li><a href="/contactUsPage">Contact Us</a></li>
+            </div>
+            <hr>
+
+
+            <!--<div class="nav_icon">
+            <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-gallery-icon-png-image_4316074.jpg" alt="Bookings">
+            <li><a href="#">Gallery</a></li>
+            </div>
+            <hr>-->
+
+
+            <div class="nav_icon" style="float: right;" id="sign">
+
+                <li>
+                    <form class="d-flex">
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+
+
+                        {% if user.is_authenticated %}
+
+
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="logeduserhello">
+                                <font style="color:white; font-size:20px;"></font>Hello<br> {{request.user}}
+                                </font>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/handlelogout">Log out</a></li>
+
+                        </ul>
+
+
+
+
+                        {% else %}
+
+                        <button class="btn signup" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            Login
+                        </button>
+
+
+                        {% endif %}
+
+
+                    </form>
+                </li>
+
+            </div>
+            <hr>
+        </ul>
+
+        <!--Side Option For small screens-->
+        <div class="burger" onclick="myFunction(this)">
+            <div class="line" id="bar1"></div>
+            <div class="line" id="bar2"></div>
+            <div class="line" id="bar3"></div>
+        </div>
+
+        <div class="nav_icon" id="login">
+
+            <li>
+                <form class="d-flex">
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+
+
+                    {% if user.is_authenticated %}
+
+
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="logeduserhello">
+                            <font style="color:white; font-size:20px;"></font>Hello<br> {{request.user}}
+                            </font>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/handlelogout">Log out</a></li>
+
+                    </ul>
+
+
+
+
+                    {% else %}
+
+                    <button style="position: relative; bottom:7.1px;" class="btn signup" type="button"
+                        class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+
+                        Log In&nbsp&nbsp&nbsp&nbsp&nbsp<img style="position: relative; bottom:4px;"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xvPVwE-_sU3RrWJrI_88gIAysvHpFqaZaqmp22hCDwXFBRHqqRQQ0Mi17qR1JuBr1TQ&usqp=CAU"
+                            alt="SignIn" class="sign_icon">
+                    </button>
+
+
+                    {% endif %}
+
+
+                </form>
+            </li>
+
+        </div>
+
+    </nav>
+
+
+    {% for message in messages%}
+    <div id="belowNavMessagesBack2"><br><br><br></div>
+    <div style="margin: 0px;" class="alert alert-success d-flex align-items-center" role="alert">
+        <svg id="belowNavMessagesBack" class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+            aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+        </svg>
+        <div id="belowNavMessages">
+            <font style="font-size: 12.5px;"> {{message}}
+        </div>
+    </div>
+
+
+
+    {% endfor%}
+
+
+
+
+
+
+
+    <!-- LoginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <form id="loginform" action="/handlelogin" method="POST">
+
+                        {% csrf_token %}
+
+
+                        <font style="text-align: center; font-size:25px; margin:10px;">Log In</font><br><br>
+
+
+
+                        <div class="form-floating mb-3 ">
+                            <input type="text" class="form-control" id="floatingInput" name="loginUser" placeholder=" ">
+                            <label for="floatingInput">Username</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" name="loginPassw"
+                                placeholder=" ">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <!-- <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div> -->
+                        <button class="btn btn primary" id="LoginSubmitBut" type="submit">Log
+                            In</button>
+                        <br>
+                        <div id="textbelowregister" style="margin: 10px;">
+                            <a style="text-decoration: none;  " href="/register">New user Sign Up</a>
+                            or
+                            <a style="text-decoration: none;" href="/homepage">Return to Store</a>
+                        </div>
+                    </form>
+
+
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% block body %}
+
+
+    {% endblock body%}
+
+    <div class="bookNow">
+        <span id="bookNowPrice">price
+        </span>
+        <a href="/myCart"> <span id="bookNowBut">Book Now</span></a>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--Footer section-->
+
+
+
+
+    {% block rateUs%}{% endblock rateUs%}
+
+    <footer id="footer">
+
+        <div id="foot">
+            <div class="box">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                </ul>
+                <!--<li><a href="#"></a></li>-->
+            </div>
+            <hr>
+            <div class="box">
+                <h1>Serving in:</h1>
+                <ul>
+                    <li>Jaipur</li>
+                    <!--<li>City 2</li>
+                    <li>City 3</li>
+                    <li>City 4</li>
+                    <li>City 5</li>
+                    <li>City 6</li>
+                    <li>City 7</li>
+                    <li>City 8</li>-->
+                </ul>
+            </div>
+            <hr>
+
+            <div class="box">
+                <h1><a href="contact.html">Contact Us:</a></h1>
+                <ul class="contact">
+                    <li>Phone Number: 9876452823</li>
+                    <li><a href="#">Gmail: barbera@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <p>Follow Us</p>
+                <div class="icon_bar">
+                    <button class="icon_btn" id="insta"
+                        onclick="window.open('https://www.instagram.com/barbera_online_salon/','_blank')"></button>
+                    <button class="icon_btn" id="facebook"
+                        onclick="window.open('https://www.facebook.com/BarberaOnlineSalon/','_blank')"></button>
+                    <button class="icon_btn" id="linkedin"
+                        onclick="window.open('https://www.linkedin.com/company/barbera2021/','_blank')"></button>
+                    <!--
+                    <button class="icon_btn" id="twitter"></button>
+                    <button class="icon_btn" id="pintrest"></button>
+                    <button class="icon_btn" id="youtube"></button>-->
+                </div>
+            </div>
+            <hr>
+        </div>
+        <p>&copy; Barbera 2021 </p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+
+
+        var cart = {};
+
+
+
+        function cartFunc(x) {
+            console.log("added to cart");
+            servId = x.id;
+
+
+
+            if (localStorage.getItem("noeic") == null) {
+
+                localStorage.setItem("noeic", 1);
+            }
+            else {
+
+                let up = Number(localStorage["noeic"]);
+                up += 1;
+                localStorage.setItem("noeic", up);
+            }
+
+            if (localStorage.length == 0) {
+                document.getElementById("cartCounter").innerText = "Empty";
+
+
+            }
+
+            document.getElementById("cartCounter").innerText = localStorage["noeic"];
+
+
+            if (localStorage[servId] == null) {
+                let cart = {
+                    name: document.getElementById(servId).parentElement.children[0].innerText,
+                    price: document.getElementById(servId).parentElement.children[3].innerText,
+                    qty: 1
+
+                }
+                localStorage.setItem(servId, JSON.stringify(cart));
+            }
+
+            else {
+                let cart = JSON.parse(localStorage.getItem(servId));
+                cart.qty += 1;
+                localStorage.setItem(servId, JSON.stringify(cart));
+
+
+
+            }
+
+
+            document.getElementById("cartCounter").innerText = localStorage["noeic"];
+
+            document.querySelector(".bookNow").style.display = "block";
+            document.getElementById("bookNowPrice").innerText = JSON.stringify(localStorage);
+
+            console.log(document.getElementById(servId).parentNode.children[3].innerText);
+
+        };
+        document.getElementById("cartCounter").innerText = localStorage["noeic"];
+
+    </script>
+
+
+
+
+    <script>
+        setTimeout(function () {
+            document.getElementById("belowNavMessages").style.display = "none";
+            document.getElementById("belowNavMessagesBack").style.display = "none";
+            document.getElementById("belowNavMessagesBack2").style.display = "none";
+        }, 2000)
+    </script>
+</body>
+
+</html>

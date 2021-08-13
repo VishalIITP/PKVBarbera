@@ -1,0 +1,988 @@
+{% extends "base.htm" %}
+{% load static%}
+
+{% block title%}Home-Barbera{% endblock title%}
+
+
+
+
+
+{% block activateHome %}current{% endblock activateHome %}
+
+
+{%block csslink%}
+<link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
+<link rel="stylesheet" href="{% static 'css/Khomepage.css' %}">
+
+{% endblock csslink%}
+
+{%block scriptlink%}{% endblock scriptlink%}
+
+
+
+{% block body%}
+
+
+
+<section id="home">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img   src="../../static/images/services_img/6.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="head-pri">Welcome to BARBERA</h5>
+                    <p class="head-sec">Get Stylish - Anytime - Anywhere</p>
+                    <p>Get Salon Services at home by expert professionals!</p>
+                    <p>Men's Salon</p>
+                    <a href="services.html"><button class="btn">BOOK APPOINTMENT</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img   src="../../static/images/services_img/14.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="head-pri">Welcome to BARBERA</h5>
+                    <p class="head-sec">Get Stylish - Anytime - Anywhere</p>
+                    <p>Get Salon Services at home by expert professionals!</p>
+                    <p>Women's Salon</p>
+                    <a href="services.html"><button class="btn">BOOK APPOINTMENT</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i0.wp.com/detechter.com/wp-content/uploads/2017/07/Hindu-Wedding-India.jpg?fit=886%2C535&ssl=1"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="head-pri">Welcome to BARBERA</h5>
+                    <p class="head-sec">Get Stylish - Anytime - Anywhere</p>
+                    <p>Get Salon Services at home by expert professionals!</p>
+                    <p>Wedding Packages</p>
+                    <a href="services.html"><button class="btn">BOOK APPOINTMENT</button></a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+<!--Offers-->
+<section id="offers">
+    <div class="heading_box">
+        <h1 class="head-pri" width="100%" align="center">OFFERS FOR YOU</h1>
+        <hr>
+    </div>
+    <div id="offer">
+        <div class="upper">
+            <div class="box">
+                <div class="box1">
+                    <img src="https://us.123rf.com/450wm/kakigori/kakigori1605/kakigori160500012/56673409-beautiful-young-bride-and-groom-couple-holding-hands-on-wedding-day.jpg?ver=6"
+                        alt="">
+                    <h1 class="head-sec" align="center"><a>30%</a><a>Discount</a></h1>
+                    <p align="center">Earn upto 30% Discount on Wedding Packages.</p>
+                    <p align="center">*T&C Apply</p>
+                </div>
+                <div class="box2">
+                    <button class="btn_offers">FIND MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="upper">
+            <div class="box">
+                <div class="box1">
+                    <img
+                        src="https://static.vecteezy.com/system/resources/previews/002/644/884/original/golden-coins-stack-with-coin-in-front-of-it-flat-illustration-isolated-on-white-background-gold-coins-in-cartoon-style-balance-profit-income-statement-and-cash-vector.jpg">
+                    <h1 class="head-sec" align="center">Earn Barbera Points</h1>
+                    <p align="center">Refer and earn upto 100 Barbera Points.</p>
+                    <p align="center">*T&C Apply</p>
+                </div>
+                <div class="box2">
+                    <button class="btn_offers">FIND MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="upper">
+            <div class="box">
+                <div class="box1">
+                    <img src="https://cdn.pixabay.com/photo/2017/05/26/05/38/discount-2345221_960_720.png" alt="">
+                    <h1 class="head-sec" align="center">Special Packages</h1>
+                    <p align="center">Get upto 50% Discount on special packages.</p>
+                    <p align="center">*T&C Apply</p>
+                </div>
+                <div class="box2">
+                    <button class="btn_offers">FIND MORE</button>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!--Services Section-->
+<!--<section id="services">
+         <div class="heading_box">
+         <h1 class="head-pri">SERVICES</h1>
+         <hr>
+         </div>
+         <div id="ser">-->
+<!--Male-->
+<!-- <div class="box">
+             <div class="main">
+             <div class="container">
+             <button class="medbtn" id="btn_male"></button>
+             <p>MEN</p>
+             </div>
+             </div>
+             <div class="icon">
+             <div class="icon_text">
+             <button class="icon_btn" id="m_1"></button>
+             <p>HAIRCUT</p>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="m_2"></button>
+             <p>SHAVING</p>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="m_3"></button>
+             <p>HAIR COLOR</p>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="m_4"></button>
+             <p>FACIAL</p>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="m_5"></button>
+             <p>HEAD MASSAGE</p>
+             </div>
+             </div>
+         </div>
+ <hr>-->
+<!--Female-->
+<!-- <div class="box">
+             <div class="main">
+             <div class="container">
+             <button class="medbtn" id="btn_female"></button>
+             <p>WOMEN</p>
+             </div>
+             </div>
+             <div class="icon">
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_1"></button>
+             <p>HAIRCUT</p>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_2"></button>
+             <P>HAIR CARE</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_3"></button>
+             <P>HAIR COLOR</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_4"></button>
+             <P>THREADING</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_5"></button>
+             <P>FACIAL</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_6"></button>
+             <P>WAXING</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_7"></button>
+             <p>MEHANDI</p>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="fm_8"></button>
+             <p>BLEACH</p>
+             </div>
+             </div>
+         </div>
+ <hr>-->
+<!--Wedding PACKAGES-->
+<!-- <div class="box">
+             <div class="main">
+             <div class="container">
+             <button class="medbtn" id="btn_wedding"></button>
+             <p>WEDDING<br> PACKAGES</p>
+             </div>
+             </div>
+             <div class="icon">
+             <div class="icon_text">
+             <button class="icon_btn" id="wed_1"></button>
+             <P>BRIDE</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="wed_2"></button>
+             <P>GROOM</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="wed_3"></button>
+             <P>MEHANDI</P>
+             </div>
+             <div class="icon_text">
+             <button class="icon_btn" id="wed_4"></button>
+             <P>MAKE-UP</P>
+             </div>
+             </div>
+         </div>
+         </div>
+     </section>-->
+
+<!--Why Barbera-->
+<section id="choose">
+    <h1 class="head-pri" width="100%" align="center">WHY BARBERA??</h1>
+    <div id="chooseus">
+        <div class="box">
+            <img src="https://www.pngitem.com/pimgs/m/557-5571703_cost-effective-png-transparent-png.png" alt="">
+            <h1 class="head-sec" align="center">Cost Effective</h1>
+            <p align="center">Best Quality Services at Cheapest prices. Grab the best deals.</p>
+        </div>
+        <div class="box">
+            <img
+                src="https://smallbizclub.com/wp-content/uploads/2020/02/Highlight-Your-Business-Certifications-and-Expertise.jpg">
+            <h1 class="head-sec" align="center">Experts Only</h1>
+            <p align="center">Our professionals are well-trained and have on-job expertise.</p>
+        </div>
+        <div class="box">
+            <img id="bag_img" src="https://static.thenounproject.com/png/74733-200.png" alt="">
+            <h1 class="head-sec" align="center">Well-Equipped</h1>
+            <p align="center">We have everything needed to complete the work.</p>
+        </div>
+    </div>
+</section>
+
+<!--Number of satisfied costumers-->
+<section id="number" onmouseover="costumer_number()">
+    <div class="num">
+        <span id="costumer_num">&nbsp;&nbsp;</span>
+        <p>Happy and Satisfied Customers</p>
+    </div>
+</section>
+
+<!--Testimonials-->
+<section id="customer-reviews">
+    <section class="head-pri" id="testimonial-head">
+        <h1>TESTIMONIALS</h1>
+        <hr>
+    </section>
+    <section class="spacer">
+        <div class="testimonial-section">
+            <div class="testi-user-img">
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img class="u3" src="https://md-aqil.github.io/images/2091127763_1_1_1.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="u1" src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg"
+                                alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="u2"
+                                src="https://md-aqil.github.io/images/attractive-beautiful-beauty-1986684.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="u4" src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg"
+                                alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="user-saying">
+                <div class="swiper-container testimonial">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper ">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+                                <p>
+                                    “This is best and biggest unified platform
+                                    for instant online admission. We can easily
+                                    take admission for any course in any institute..“
+                                </p>
+                                <div class="name">-Ramkishor Verma-</div>
+                                <div class="designation">University Student</div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+
+                                <p>
+                                    “This is best and biggest unified platform
+                                    for instant online admission. We can easily
+                                    take admission for any course in any institute..“
+                                </p>
+                                <div class="name">-Ramkishor Verma-</div>
+                                <div class="designation">University Student</div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+
+                                <p>
+                                    “This is best and biggest unified platform
+                                    for instant online admission. We can easily
+                                    take admission for any course in any institute..“
+                                </p>
+                                <div class="name">-Ramkishor Verma-</div>
+                                <div class="designation">University Student</div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
+
+                                <p>
+                                    “This is best and biggest unified platform
+                                    for instant online admission. We can easily
+                                    take admission for any course in any institute..“
+                                </p>
+                                <div class="name">-Ramkishor Verma-</div>
+                                <div class="designation">University Student</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination swiper-pagination-white"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+<section id="gallery">
+    <div class="block-schedule overlay site-section">
+        <div class="container" id="abt">
+
+
+            <div class="heading-with-border">
+                <h2 class="head-pri" style="font-family: 'Livvic', sans-serif;">
+                    <strong>
+                        <div class="prevspons">
+                            <br>
+                            Glimpses of our Services
+                        </div>
+                    </strong>
+
+                </h2><br>
+            </div>
+
+
+
+            <marquee   scrolldelay="-6" scrollamount="15" width="100%">
+
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+
+
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/1.jpg" alt="1st slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/2.jpg" alt="2nd slide" height="200px" width="300px">
+
+
+
+                <img   src="../../static/images/services_img/4.jpg" alt="4rd slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/5.jpg" alt="5th slide" height="200px" width="300px">
+
+                <img   src="../../static/images/services_img/6.jpg" alt="6th slide" height="200px" width="300px">
+
+
+
+
+
+
+            </marquee>
+
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+</section>
+<!--Number of Download-->
+<section id="app" onmouseover="download_number()">
+    <div class="box">
+        <h2 class="head-pri">BOOK FROM YOUR MOBILE</h1>
+            <h2 class="head-sec">Download our App from Google Play Store.</h1>
+
+                <button class="photo_btn" id="google_store"
+                    onclick="window.open('https://play.google.com/store/apps/details?id=com.barbera.barberaconsumerapp&hl=en_IN&gl=US','_blank')"></button>
+                <h2 class="head-sec"><span id="download_num"></span>Downloads</h1>
+    </div>
+    <!--Previous animation-->
+    <!--<div class="box_move">
+             <img id="move_1" src="https://image.winudf.com/v2/image1/Y29tLmJhcmJlcmEuYmFyYmVyYWNvbnN1bWVyYXBwX3NjcmVlbl8xXzE2MDM1MTcyOTRfMDY0/screen-1.jpg?fakeurl=1&type=.jpg" alt="">
+             <img id="move_2" src="https://play-lh.googleusercontent.com/1E33qxK09D_kiqJwP51Zae0nXYiXViAJz1IUjXCqmyEjMj9ISDVlq3_s9TvkfEoaSEM=w1536-h696-rw" alt="">
+         </div>-->
+    <!--Phone animation-->
+    <section id="phone_app">
+        <img class="outer" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Nexus_6P_%E6%A8%A1%E5%9E%8B.png"
+            alt="">
+        <div class="video">
+            <video width="340px" height="500px" autoplay>
+                <source src="../../static/video/App_rec.mp4" type="video/mp4">
+                <source src="../../static/video/App_rec.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</section>
+
+<!--Feedback Form-->
+<!--<section id="feedback">
+         <div class="box">
+                 <h1>Any Suggestions or Queries...Just Drop a Message!!</h1>
+             <form class="form_box">
+                 <input type="text" class="formde" id="fname" placeholder="Name*">
+                 <input type="email" class="formde" id="femail" placeholder="E-mail*">
+                 <textarea name="message" id="msg" rows="8" cols="40" class="formde" placeholder="Enter Your Message*"></textarea>
+                 <button class="submit_btn" type="submit">SUBMIT NOW</button>
+             </form>
+         </div>
+     </section>-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script>
+
+    //Home section photos fading animation
+    /*var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }*/
+
+    //To change Burger icon to cross
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+    //Navigation Bar for mobiles and table
+    burger = document.querySelector('.burger')
+    navbar = document.querySelector('.navbar')
+    navList = document.querySelector('.nav-list')
+
+    burger.addEventListener('click', () => {
+        navList.classList.toggle('v-class-resp');
+        navbar.classList.toggle('h-nav-resp');
+    })
+
+    //section : Number of Customers
+    function costumer_number() {
+        let costumer_num = document.getElementById("costumer_num");
+        let i = 0;
+        let timer;
+        function change_1(i) {
+            costumer_num.innerHTML = `${i}+ `;
+        }
+        for (i = 0; i <= 50; i++) {
+            timer = setTimeout(change_1, (10 * i), 100 * i);
+        }
+    }
+
+    //section :number of downloads
+    function download_number() {
+        let download_num = document.getElementById("download_num");
+        function change(i) {
+            download_num.innerHTML = `${i}+ `;
+        }
+
+        for (i = 0; i <= 50; i++) {
+            timer = setTimeout(change, 500 + (10 * i), 20 * i);
+        }
+    }
+</script>
+<!--Testimonial-->
+<script src="https://md-aqil.github.io/images/swiper.min.js"></script>
+<script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: '2',
+        // coverflowEffect: {
+        //   rotate: 50,
+        //   stretch: 0,
+        //   depth: 100,
+        //   modifier: 1,
+        //   slideShadows : true,
+        // },
+
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 50,
+            modifier: 6,
+            slideShadows: false,
+        },
+
+    });
+
+
+    var galleryTop = new Swiper('.swiper-container.testimonial', {
+        speed: 400,
+        spaceBetween: 50,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+        pagination: {
+            clickable: true,
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
+</script>
+
+<!--Section: Gallery-->
+<script>
+    /*! Elastic Slider (c) 2014 // Taron Mehrabyan // Ruben Sargsyan
+*/
+
+    window.addEventListener('load', onWndLoad, false);
+
+    function onWndLoad() {
+
+        var slider = document.querySelector('.slider');
+        var sliders = slider.children;
+
+
+
+
+        var initX = null;
+        var transX = 0;
+        var rotZ = 0;
+        var transY = 0;
+
+        var curSlide = null;
+
+        var Z_DIS = 50;
+        var Y_DIS = 10;
+        var TRANS_DUR = 0.4;
+
+        var images = document.querySelectorAll('img');
+        for (var i = 0; i < images.length; i++) {
+            images[i].onmousemove = function (e) {
+                e.preventDefault()
+
+            }
+            images[i].ondragstart = function (e) {
+                return false;
+
+            }
+        }
+
+        function init() {
+
+            var z = 0, y = 0;
+
+            for (var i = sliders.length - 1; i >= 0; i--) {
+                sliders[i].style.transform = 'translateZ(' + z + 'px) translateY(' + y + 'px)';
+
+                z -= Z_DIS;
+                y += Y_DIS;
+            }
+
+
+            attachEvents(sliders[sliders.length - 1]);
+
+
+
+        }
+        function attachEvents(elem) {
+            curSlide = elem;
+
+            curSlide.addEventListener('mousedown', slideMouseDown, false);
+            curSlide.addEventListener('touchstart', slideMouseDown, false);
+        }
+        init();
+        function slideMouseDown(e) {
+
+            if (e.touches) {
+                initX = e.touches[0].clientX;
+            }
+            else {
+                initX = e.pageX;
+            }
+
+
+            document.addEventListener('mousemove', slideMouseMove, false);
+            document.addEventListener('touchmove', slideMouseMove, false);
+
+            document.addEventListener('mouseup', slideMouseUp, false);
+            document.addEventListener('touchend', slideMouseUp, false);
+        }
+        var prevSlide = null;
+
+        function slideMouseMove(e) {
+            var mouseX;
+
+            if (e.touches) {
+                mouseX = e.touches[0].clientX;
+            }
+            else {
+                mouseX = e.pageX;
+            }
+
+            transX += mouseX - initX;
+            rotZ = transX / 20;
+
+            transY = -Math.abs(transX / 15);
+
+
+
+            curSlide.style.transition = 'none';
+            curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            curSlide.style.transform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            var j = 1;
+            //remains elements
+            for (var i = sliders.length - 2; i >= 0; i--) {
+
+                sliders[i].style.webkitTransform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
+                sliders[i].style.transform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
+                sliders[i].style.transition = 'none';
+                j++;
+            }
+
+
+
+            initX = mouseX;
+            e.preventDefault();
+            if (Math.abs(transX) >= curSlide.offsetWidth - 30) {
+
+                document.removeEventListener('mousemove', slideMouseMove, false);
+                document.removeEventListener('touchmove', slideMouseMove, false);
+                curSlide.style.transition = 'ease 0.2s';
+                curSlide.style.opacity = 0;
+                prevSlide = curSlide;
+                attachEvents(sliders[sliders.length - 2]);
+                slideMouseUp();
+                setTimeout(function () {
+
+
+
+
+
+                    slider.insertBefore(prevSlide, slider.firstChild);
+
+                    prevSlide.style.transition = 'none';
+                    prevSlide.style.opacity = '1';
+                    slideMouseUp();
+
+                }, 201);
+
+
+
+                return;
+            }
+        }
+        function slideMouseUp() {
+            transX = 0;
+            rotZ = 0;
+            transY = 0;
+            curSlide.style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR + 's';
+
+            curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            curSlide.style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            //remains elements
+            var j = 1;
+            for (var i = sliders.length - 2; i >= 0; i--) {
+                sliders[i].style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR / (j + 0.9) + 's';
+                sliders[i].style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
+                sliders[i].style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
+
+                j++;
+            }
+
+            document.removeEventListener('mousemove', slideMouseMove, false);
+            document.removeEventListener('touchmove', slideMouseMove, false);
+
+        }
+
+
+    }
+</script>
+<!--<script>
+     window.onscroll = function() {scrollFunction()};
+ function scrollFunction() {
+   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+     document.getElementById("navbar").style.background = "#000000";
+   } else {
+     document.getElementById("navbar").style.background = "none";
+   }
+ }
+ </script>-->
+<!--back to top-->
+<script>
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+        ) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+{% endblock body%}
+
+
+
+
+{% block rateUs %}
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <a class="goto" id="rate" href="/rate">Rate-Us</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock rateUs%}

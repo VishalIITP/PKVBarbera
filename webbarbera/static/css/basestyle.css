@@ -1,0 +1,468 @@
+/*Navigation Bar*/
+
+.signup{
+    color:white;
+    border: none;
+    font-size: 1rem;
+    font-family: "Livvic", sans-serif;
+}
+.signup:hover{
+    color: rgb(197, 194, 194);
+    border: none;
+}
+
+.signup:visited{
+    color: white;
+    border: none;
+}
+
+.signup:active{
+    color: rgb(197, 194, 194);
+    border: none;
+}
+
+
+
+
+
+
+.logo {
+  width: 50px;
+  z-index: 10;
+  height: 50px;
+  /* border: 1px solid red; */
+  position: fixed;
+  top: 8px;
+  left: 10px;
+  border-radius: 50px;
+  margin-left: 5%;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 50px;
+  margin: 5px;
+  position: fixed;
+  top: 2px;
+  left: 15px;
+  z-index: 20;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  height: 70px;
+  width: 100%;
+}
+.navbar hr {
+  display: none;
+}
+.nav-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-left: 8.4%;
+}
+
+.nav-list li {
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Livvic", sans-serif;
+}
+
+.nav-list li a:hover {
+  color: rgb(197, 194, 194);
+}
+.background {
+  background: black;
+  background-size: cover;
+  background-blend-mode: darken;
+  z-index: 3;
+}
+.burger {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 55px;
+  top: 25px;
+}
+.line {
+  width: 33px;
+  background-color: white;
+  height: 4px;
+  margin: 5px 3px;
+}
+
+.nav_icon img {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+.nav_icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 1.5%;
+}
+#sign {
+  display: none;
+}
+#login {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  margin: 0px;
+  margin-right: 5%;
+}
+#login a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Livvic", sans-serif;
+}
+
+#login a:hover {
+  color: rgb(197, 194, 194);
+}
+.nav_icon p {
+  color: white;
+}
+.current {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+#home_icon {
+  margin: 5px;
+}
+#contact_icon {
+  margin: 5px;
+}
+#login .sign_icon {
+  margin: 0px;
+  margin-right: 10px;
+}
+#login li {
+  list-style: none;
+}
+
+/*Section: Footer*/
+#footer {
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+}
+#foot {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px 200px;
+}
+#foot .box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 0px;
+  /*border: 2px solid red;*/
+}
+
+#foot .box ul {
+  text-decoration: none;
+  display: flex;
+  padding-left: 0px;
+}
+#foot .box ul li {
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 10px;
+  margin-right: 15px;
+  color: lightgrey;
+  font-size: 1rem;
+  font-family: "Livvic", sans-serif;
+}
+#foot .box a {
+  text-decoration: none;
+  color: lightgrey;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Livvic", sans-serif;
+  font-size: 1rem;
+}
+#foot .box a:hover {
+  color: white;
+}
+
+#footer p {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0px;
+  font-family: "Livvic", sans-serif;
+}
+#foot .box h1 {
+  font-size: 1rem;
+  margin: 10px;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Livvic", sans-serif;
+}
+
+#foot .icon_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#foot .icon_btn {
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+}
+#foot .icon_btn:hover {
+  width: 31px;
+  height: 31px;
+}
+/*Social Media Icons Images*/
+#insta {
+  background: url("https://i.pinimg.com/originals/c6/2c/05/c62c055ede6aadbb1f94a555071c98b9.jpg")
+    no-repeat center center/cover;
+}
+#facebook {
+  background: url("https://i2.wp.com/socialmediaicons.biz/wp-content/uploads/2019/04/Facebook-vector-white-round-social-media-icons.jpg?fit=1080%2C1080&ssl=1")
+    no-repeat center center/cover;
+  z-index: 1;
+}
+#linkedin {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPG-vDpVduE1tHuJIiR3pfx8p-QYEZQo4L-l-6W5zmVTiNoYGDV63ZpcO2yLMloGeavyk&usqp=CAU")
+    no-repeat center center/cover;
+}
+#pintrest {
+  background: url("https://i.pinimg.com/originals/c8/3e/66/c83e661429ac53ea8cbb597e047c35fd.png")
+    no-repeat center center/cover;
+}
+#youtube {
+  background: url("https://cutewallpaper.org/21/youtube-logo-black-background/Youtube-White-Icon-Youtube-Logo-Youtube-Icon-Youtube-PNG-.jpg")
+    no-repeat center center/cover;
+}
+#twitter {
+  background: url("https://pngimg.com/uploads/twitter/twitter_PNG2.png")
+    no-repeat center center/cover;
+}
+/*Utility Classes*/
+
+.head-pri {
+  font-size: 3rem;
+  padding: 10px;
+  text-align: center;
+}
+
+/*.btn{
+    padding: 15px 15px;
+    margin: 10px;
+    border: 2px white;
+    font-size: 1.5rem;
+    background-color: white;
+    border-radius: 7px;
+    color: #614b4b;
+}
+.btn:hover{
+    background-color: grey;
+    color: white;
+}*/
+.head-sec {
+  display: block;
+  margin: auto;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .nav_icon {
+    margin: 2% 1%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .nav_icon {
+    margin: 2% 0.7%;
+  }
+}
+
+/*Phone and Tablet max-width:1050px*/
+@media only screen and (max-width: 1200px) {
+  /*Navigation*/
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    margin-top: 50px;
+  }
+  .navbar {
+    height: 700px;
+    flex-direction: column;
+    border: 1px solid white;
+    transition: all 0.7s ease-out;
+  }
+  .burger {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #bar1,
+  #bar2,
+  #bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change #bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change #bar2 {
+    opacity: 0;
+  }
+
+  .change #bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .h-nav-resp {
+    height: 100px;
+  }
+  .v-class-resp {
+    opacity: 0;
+  }
+  .section {
+    flex-direction: column-reverse;
+  }
+  .nav-list li a {
+    font-size: 1.5rem;
+  }
+  .navbar a:hover {
+    font-size: 1.6rem;
+  }
+
+  .navbar hr {
+    display: block;
+    width: 70%;
+  }
+  #login {
+    display: none;
+  }
+  #sign {
+    display: flex;
+  }
+  .current {
+    text-decoration: none;
+    background-color: #626262;
+    margin: 0px;
+  }
+  .nav_icon {
+    width: 70%;
+  }
+  .logo {
+    top: 22px;
+  }
+}
+hr {
+  color: white;
+  opacity: 1;
+  margin: 0px;
+}
+@media only screen and (max-width: 1100px) {
+  /*Section : Home*/
+  #home {
+    height: 800px;
+  }
+
+  /*Section: Footer*/
+  #foot {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 25px;
+  }
+  #foot .box {
+    flex-direction: column;
+    margin: 10px;
+    font-size: 1.3rem;
+  }
+  #foot .box ul {
+    display: flex;
+    flex-direction: row;
+  }
+  #foot .box ul li {
+    font-size: 1.2rem;
+    margin: 10px;
+    padding: 1px;
+  }
+  #foot .box h1 {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  #foot .box a {
+    font-size: 1.2rem;
+  }
+  #foot p1 {
+    font-size: 1.2rem;
+  }
+  #foot .icon_btn {
+    height: 40px;
+    width: 40px;
+  }
+  #foot .icon_btn:hover {
+    width: 42px;
+    height: 42px;
+  }
+
+  /*feedback*/
+  #feedback .box {
+    width: 60%;
+  }
+  #feedback .submit_btn {
+    font-size: 1.3rem;
+    border-radius: 5px;
+    background-color: white;
+    color: grey;
+    width: 98.9%;
+    margin-top: 10px;
+  }
+  #foot .formde {
+    font-size: 1.3rem;
+  }
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background: url("https://ps.w.org/ar-back-to-top/assets/icon-256x256.jpg?rev=2022521")
+    no-repeat center center/cover;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  z-index: 100;
+}

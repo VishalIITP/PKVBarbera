@@ -1,0 +1,56 @@
+{% extends "base.htm" %}
+
+{% block body%}
+
+
+<div class="registrationform" style="
+
+font-size:17px;
+border:2px solid #ffc39e;
+height:550px;
+margin:15px 20% 15px 20%;  
+width:60%;
+padding:60px;
+border-radius:10px; ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form type="submit" method="POST">
+
+        <font style="text-align: center; font-size:32px; ">Log in</font><br><br>
+
+        Username<input style="border-radius: 10px; font-size:17px"><br>
+        Email<input style="border-radius: 10px; font-size:17px" type="email"><br>
+        Phone<input style="border-radius: 10px; font-size:17px"><br>
+        Password<input style="border-radius: 10px; font-size:17px" type="password"><br>
+        <input type="checkbox"> Remember me<br><br>
+
+        <a href="/logedinhomepage"> <input style="border-radius: 10px; font-size:17px" type="button" value="SIGN IN" method="POST">
+
+        </a>
+    </form>
+</div>
+
+
+<div style="font-size: 30px; text-align:center;">
+
+    Not a registerd user Sign Up <a href="/register"><input type="button" value="SIGN UP"
+            style="font-size: 17px; border-radius:10px;  padding:3px; margin:5px 5px 40px 5px;"></a>
+</div>
+
+{% endblock body%} 

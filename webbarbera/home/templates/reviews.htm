@@ -1,0 +1,167 @@
+{% extends "base.htm"%}
+{% load static %}
+{% block title%}Costumer-Reviews{% endblock title%}
+
+{% block body%}
+
+<!-- <center>
+    <h1 style="color: black;">Have a look at costumer's reviews</h1>
+    <div class="review-table">
+
+
+        <table id="myTable" class="display">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>User</th>
+                    <th>Rating</th>
+                    <th>Feedback</th>
+                <rgb(5, 0, 0); border-radius:5px;">
+        User: {{x.userRater}}
+    </p>/tr>
+            </thead>
+            <tbody>
+                {% for x in allreviews %}
+                <tr>
+                    <td scope="row">{{forloop.counter}}</td>
+                    <td>{{x.user}}</td>
+                    <td>{{x.rating}}</td>
+                    <td>{{x.feedback}}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+
+
+    </div>
+</center> -->
+
+<button type="button" id="goodReview" onclick="goodShower()">Good Reviews</button>
+<button type="button" id="Reset" onclick="resetShower()">Reset</button>
+<button type="button" id="badReview" onclick="badShower()">Bad Reviews</button>
+
+
+{% for x in allreviews %}
+<div class="my-5 " id="fullfeed{{forloop.counter}}">
+    <p><b>{{forloop.counter}}.</b></p>
+    <p class="feedbackerpara "
+        style="color:rgb(255,255,255); background-color: rgba(0,0,0,1); border:2px solid rgb(255, 255, 255); border-radius:5px;">
+        User: <span
+        style="background-color: white; color:rgba(0,0,0,1)">{{x.userRater}}</span>
+    </p>
+
+    <ul class="feedbackerpara" style="color: white; background-color:rgba(0,0,0,1); ">
+        <li> Your overall experience with us ----><span class="overallexp"
+                style="background-color: white; color:rgba(0,0,0,1)"> {{x.rating}}</span></li>
+        <li> Friendliness and courtesy shown by our Employee----><span
+                style="background-color: white; color:rgba(0,0,0,1)"> {{x.rating2}} &nbsp</span></li>
+        <li>Time managing skills of our Employee----><span style="background-color: white; color:rgba(0,0,0,1)">
+                {{x.rating3}} &nbsp</span></li>
+    </ul>
+
+    <p class="feedbackpara "
+        style="color:rgb(255,255,255); background-color: rgba(0,0,0,1); border:2px solid black; border-radius:5px;">
+        Suggestions: <span style="background-color: white; color:rgba(0,0,0,1)"> {{x.feedback}} &nbsp</span>
+    </p>
+</div>
+
+
+
+{% endfor %}
+
+
+
+<!-- 
+<button type="button" id="goodReview" onclick="goodShower">Good Reviews</button>
+<button type="button" id="badReview" onclick="badShower">Bad Reviews</button>
+ -->
+
+<script>
+    function goodShower() {
+        let rate = document.getElementsByClassName("overallexp");
+
+        
+
+        for (let i = 0; i < rate.length; i++) {
+            let comp = rate[i].innerHTML;
+            if (comp <= 3) {
+                document.getElementById("fullfeed" + (i + 1) + "").style.display = "none";
+            }
+
+
+
+        }
+
+
+    };
+
+    function badShower() {
+        let rate = document.getElementsByClassName("overallexp");
+
+         
+        for (let i = 0; i < rate.length; i++) {
+            let comp = rate[i].innerHTML;
+            if (comp > 3) {
+                document.getElementById("fullfeed" + (i + 1) + "").style.display = "none";
+            }
+
+
+
+        }
+
+
+    };
+    function resetShower() {
+        let rate = document.getElementsByClassName("overallexp");
+
+        
+
+        for (let i = 0; i < rate.length; i++) {
+            let comp = rate[i].innerHTML;
+             
+                document.getElementById("fullfeed" + (i + 1) + "").style.display = "block";
+             
+
+
+
+        }
+
+
+    };
+
+
+
+
+
+</script>
+
+
+
+
+{% endblock body%}
+
+
+
+{% block rateUs %}
+
+<div class="rateUs" style="
+        border:2px solid black;
+        border-radius:5px;
+        height:40px;
+        width: 100px;
+        color:black;
+        padding:9px;
+        position:relative;
+        left:80%;
+         
+        margin:15px;
+        ">
+    <a style="color: black; text-decoration:none; font-size:15px; " id="rate" href="/rate">Rate-Us</a>
+
+</div>
+
+
+
+{%endblock rateUs%}

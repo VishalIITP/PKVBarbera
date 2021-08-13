@@ -1,0 +1,229 @@
+{% extends "base.htm"%}
+{% load static%}
+
+
+{% block title%}My Cart-Barbera{% endblock title%}
+
+{% block activatemyCart %}active{% endblock activatemyCart %}
+
+
+
+
+{%block csslink%}
+<link id="changer" href="../../static/css/myCartcss.css" rel="stylesheet">{% endblock csslink%}
+
+{% block body%}
+<h3 id="emptyCart">
+</h3>
+
+
+<main>
+  <div class="basket" id="mainbasket">
+    <div id="carthead">
+      <div class="basket-module">
+        <label for="promo-code">Enter a promotional code</label>
+        <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+        <button class="promo-code-cta">Apply</button>
+      </div>
+      <div class="basket-labels">
+        <ul>
+          <li class="item item-heading">Item</li>
+          <li class="price">Price</li>
+          <li class="quantity">Quantity</li>
+          <li class="subtotal">Subtotal</li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <aside id="asidecheckout">
+    <div class="summary">
+      <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+      <div class="summary-subtotal">
+        <div class="subtotal-title">Subtotal</div>
+        <div class="subtotal-value final-value" id="basket-subtotal">130.00</div>
+        <div class="summary-promo hide">
+          <div class="promo-title">Promotion</div>
+          <div class="promo-value final-value" id="basket-promo"></div>
+        </div>
+      </div>
+      <div class="summary-delivery">
+        <select name="delivery-collection" class="summary-delivery-selection">
+          <option value="0" selected="selected">Select Collection or Delivery</option>
+          <option value="collection">Collection</option>
+          <option value="first-class">Royal Mail 1st Class</option>
+          <option value="second-class">Royal Mail 2nd Class</option>
+          <option value="signed-for">Royal Mail Special Delivery</option>
+        </select>
+      </div>
+      <div class="summary-total">
+        <div class="total-title">Total</div>
+        <div class="total-value final-value" id="basket-total">130.00</div>
+      </div>
+      <div class="summary-checkout">
+        <button class="checkout-cta">Go to Secure Checkout</button>
+      </div>
+    </div>
+  </aside>
+</main>
+<button id="clearCart" onclick="clearfunc()">Clear Cart</button>
+<a href="/homepage"> <button id="checkServices">Book Now</button></a>
+
+
+<script>
+  if (localStorage.length == 0) {
+    document.getElementById("emptyCart").innerText = "After you add sevices to your cart it will be shown here.";
+    document.getElementById("carthead").style.display = "none";
+    document.getElementById("asidecheckout").style.display = "none";
+    document.getElementById("clearCart").style.display = "none";
+
+  }
+  else {
+    document.getElementById("checkServices").style.display = "none";
+
+
+    for (let p = 0; p < localStorage.length; p++) {
+      if (localStorage.key(p) != "noeic") {
+
+
+
+        const fipar = document.createElement("div");
+        fipar.setAttribute("class", "basket-product");
+
+        fiparfich = document.createElement("div");
+        fiparfich.setAttribute("class", "item");
+        fiparfich.setAttribute("id", "serviceName");
+        const itemName = document.createTextNode(JSON.stringify(JSON.parse(localStorage[localStorage.key(p)]).name))
+        fiparfich.appendChild(itemName);
+        fipar.appendChild(fiparfich);
+
+        fiparsdch = document.createElement("div");
+        fiparsdch.setAttribute("class", "price");
+        const itemPrice = document.createTextNode(JSON.stringify(JSON.parse(localStorage[localStorage.key(p)]).price))
+        const itemPriceVar = JSON.parse(localStorage[localStorage.key(p)]).price;
+        console.log("Ye price variable se liya hai : " + itemPriceVar);
+        fiparsdch.appendChild(itemPrice);
+        fipar.appendChild(fiparsdch);
+
+        fiparthch = document.createElement("div");
+        fiparthch.setAttribute("class", "quantity");
+        const itemQuantity = JSON.stringify(JSON.parse(localStorage[localStorage.key(p)]).qty)
+        const itemQuantityVar = JSON.parse(localStorage[localStorage.key(p)]).qty;
+
+        fiparthchfich = document.createElement("input");
+        fiparthchfich.setAttribute("class", "quantity-field");
+        fiparthchfich.setAttribute("min", 1);
+        fiparthchfich.setAttribute("type", "number");
+        fiparthchfich.setAttribute("value", itemQuantity);
+
+        fiparthch.appendChild(fiparthchfich);
+        fipar.appendChild(fiparthch);
+
+
+        fiparfrch = document.createElement("div");
+        fiparfrch.setAttribute("class", "subtotal");
+
+        fiparfrch.innerText = (itemPriceVar * itemQuantityVar);
+        fipar.appendChild(fiparfrch);
+
+        console.log("Ye wala item quantity var" + itemQuantityVar);
+
+
+
+
+
+
+        fiparftch = document.createElement("div");
+        fiparftch.setAttribute("class", "remov");
+        fiparftchsdch = document.createElement("button");
+        fiparftchsdch.setAttribute("id", "removeItemCartBut");
+        fiparftchsdch.innerText = "Delete Item";
+        fiparftch.appendChild(fiparftchsdch);
+        fipar.appendChild(fiparftch);
+
+
+
+
+
+
+
+
+
+        document.getElementById("mainbasket").appendChild(fipar);
+
+      }
+
+
+      console.log(JSON.stringify(JSON.parse(localStorage[localStorage.key(p)]).name));
+
+      console.log(JSON.parse(localStorage[localStorage.key(p)]));
+    }
+
+
+  }
+  function clearfunc() {
+
+
+    localStorage.clear();
+    document.location.reload(true)
+  }
+
+
+</script>
+
+
+
+
+
+{% endblock body %}
+
+
+
+
+
+{% block rateUs %}
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+
+    </div>
+    <div class="col">
+
+      <div class="rateUs" style="
+             border:2px solid black;
+              border-radius:5px;
+             height:40px;
+              width: 100px;
+                margin-top:30px;
+                 
+    ">
+        <a style="color: black; text-decoration:none; font-size:15px; " id="rate" href="/rate">Rate-Us</a>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock rateUs %}

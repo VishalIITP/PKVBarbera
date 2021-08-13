@@ -1,0 +1,151 @@
+{% extends "base.htm" %}
+{% load static%}
+
+{% block title%}Home-Barbera{% endblock title%}
+
+
+
+
+{% block activatehomepage %}active{% endblock activatehomepage%}
+
+
+
+
+
+
+
+{% block body%}
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-interal>
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+
+            <img src="../static/images/slider1.jpg" class="d-block w-100" alt="...">
+            <img id="blurcrousel" src="{% static 'images/blurrer.jpg' %}" class="d-block w-100">
+            <div class="greeting">
+                Hi! {Username} It's been {days acc to database}days to the {any saloon sevice previously took acc to our
+                databse} do check out best offers personalised for you.
+            </div>
+
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slider2.jpg' %}" class="d-block w-100" alt="...">
+            <img id="blurcrousel" src="{% static 'images/blurrer.jpg' %}" class="d-block w-100">
+
+            <div class="greeting">
+                Hi! {Username} It's been {days acc to database}days to the {any saloon sevice previously took acc to our
+                databse} do check out best offers personalised for you.
+            </div>
+
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/slider3.jpg' %}" class="d-block w-100" alt="...">
+            <img id="blurcrousel" src="{% static 'images/blurrer.jpg' %}" class="d-block w-100">
+
+            <div class="greeting">
+                Hi! {Username} It's been {days acc to database}days to the {any saloon sevice previously took acc to our
+                databse} do check out best offers personalised for you.
+            </div>
+
+
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+
+
+
+
+
+
+<div class="mainbody">
+    <div class="container-fluid">
+        <div class="row" id="r1">
+            <h1 class="sevice-head">Men's Section</h1>
+            <div class="col-sm" id="r1c1">
+
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+            </div>
+            <div class="col-sm" id="r1c2">
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+            </div>
+            <div class="col-sm" id="r1c3">
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+            </div>
+        </div>
+
+
+
+        <div class="row" id="r2">
+            <h1 class="sevice-head">Men's Section</h1>
+            <div class="col-sm" id="r2c1">
+
+                <img src=" " width="150px" height="auto">
+            </div>
+            <div class="col-sm" id="r2c2">
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+            </div>
+            <div class="col-sm" id="r3c3">
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+            </div>
+        </div>
+        <div class="row" id="r3">
+            <h1 class="sevice-head">Men's Section</h1>
+            <div class="col-sm" id="r3c1">
+
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+            </div>
+            <div class="col-sm" id="r2c2">
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+            </div>
+            <div class="col-sm" id="r3c3">
+                <img src="../static/images/allef-vinicius-IvQeAVeJULw-unsplash.jpg" width="150px" height="auto">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock body%}s
+
+
+{% block rateUs %}
+
+<div class="rateUs" style="
+        border:2px solid white;
+        border-radius:5px;
+        height:40px;
+        width: 100px;
+        color:white;
+        padding:9px;
+        position:relative;
+        left:80%;
+         
+        margin:15px;
+        ">
+        <a style="color: white; text-decoration:none; font-size:15px; " id="rate" href="/rate">Rate-Us</a>
+
+    </div>
+
+
+
+{%endblock rateUs%}
