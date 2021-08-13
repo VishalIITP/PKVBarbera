@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="icon" href="https://barbera.netlify.app/nikita.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
+    <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="style_common.css">
+
+
+    <title>About Barbera</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="https://barbera.netlify.app/nikita.jpeg">
+  <!--  <img class="barbera circular" src="barbera new.png" alt="Barbera profile picture" style="top: 0">
+    <img class="border" src="border new.png" alt="border">-->
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+
+
+
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+  </head>
+<!-- <body style="background-image: url('images/bg4.jpg');"> -->
+    <body>
+      <!--Back To top-->
+      <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+  </button>
+  <section id="black_top">
+        
+  </section>
+      <a href="home.html"><img src="https://barbera.netlify.app/nikita.jpeg" alt="logo" class="logo"></a>
+      <!--Navigation Bar-->
+      <nav class="navbar background h-nav-resp">
+          <ul class="nav-list v-class-resp">
+              <!--<div class="logo"><img src="https://barbera.netlify.app/nikita.jpeg" alt="logo"></div>-->
+              <div class="nav_icon">
+             <!-- <img src="https://us.123rf.com/450wm/fokaspokas/fokaspokas1804/fokaspokas180400063/98532451-a-house-icon-on-white-icon-on-black-background-.jpg?ver=6" alt="Home" id="home_icon">-->
+              <li><a href="home.html">Home</a></li>
+              </div>
+              <hr>
+              <div class="nav_icon">
+              <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfglX2FUbxIF11BZiecgectkGhkjPsr4WFu2lUPEtYTIXt-Iq6uxultTxlyUZfl-SUHPY&usqp=CAU" alt="Services" id="services_icon">-->
+              <li><a href="services.html">Services</a></li>
+              </div>
+              <hr>
+              <div class="nav_icon">
+              <!-- <img src="https://i.pinimg.com/originals/db/9c/66/db9c669ece4c0168bc0fc2076960a3b8.png" alt="Tips" id="tips_icon" style="margin-right: 4px;"> -->
+              <li><a href="tips.html">Tips</a></li>
+              </div>
+              <hr>
+              <div class="nav_icon">
+              <!-- <img src="https://thumbs.dreamstime.com/b/shopping-icon-shopping-cart-icon-dark-background-simple-vector-icon-shopping-icon-shopping-cart-icon-dark-background-116659167.jpg" alt="Cart" id="cart_icon" style="margin-right: 4px;"> -->
+              <li><a href="#">Cart</a></li>
+              </div>
+              <hr>
+              <div class="nav_icon current">
+              <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8sksWlhY2C3peMqclAzuHm4z0-_kv7IR7rQ&usqp=CAU" alt="AboutUs" id="about_icon">-->
+              <li><a href="about.html">About Us</a></li>
+              </div>
+              <hr>
+              <div class="nav_icon">
+              <!-- <img src="https://i.pinimg.com/originals/22/52/5e/22525e1af533b224bd2314e1126ead4f.jpg" alt="Contact" id="contact_icon">-->
+              <li><a href="contact.html">Contact Us</a></li>
+              </div>
+              <hr>
+              <!--<div class="nav_icon">
+              <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-gallery-icon-png-image_4316074.jpg" alt="Bookings">
+              <li><a href="#">Gallery</a></li>
+              </div>
+              <hr>-->
+              <div class="nav_icon" id="sign">
+              <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xvPVwE-_sU3RrWJrI_88gIAysvHpFqaZaqmp22hCDwXFBRHqqRQQ0Mi17qR1JuBr1TQ&usqp=CAU" alt="SignIn" class="sign_icon"> -->
+              <li><a href="#">Sign Up</a></li>
+              </div>
+
+          </ul>
+          <!--Side Option For small screens-->
+          <div class="burger" onclick="myFunction(this)">
+              <div class="line" id="bar1"></div>
+              <div class="line" id="bar2"></div>
+              <div class="line" id="bar3"></div>
+          </div>
+             <div class="nav_icon" id="login">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xvPVwE-_sU3RrWJrI_88gIAysvHpFqaZaqmp22hCDwXFBRHqqRQQ0Mi17qR1JuBr1TQ&usqp=CAU" alt="SignIn" class="sign_icon">
+              <li><a href="#">Sign Up</a></li>
+              </div>
+      </nav>
+
+      <div class="svg-wrapper">
+    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+      <rect class="shape" height="60" width="320" />
+    </svg>
+     <div class="texth">About Us</div>
+  </div>
+
+    <section class="whoarewe">
+    <div class="video">
+      <iframe width="auto" height="350" src="https://www.youtube.com/embed/WFrrffylwRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="gettoknow">
+      <div class="heading">
+        <h2>Who we are?</h2>
+      </div>
+      <hr class="kartik" style="width: 70%">
+      <div class="mater">
+        Our Best Features USER-FRIENDLY INTERFACE The Chic & attractive landing page is designed to capture the hearts of the existing Customer's, and lure potential Customer's to convert them into regular Customer's.
+        APPOINTMENTS The YES MADAM Mobile app allows customers to easily book,Manage, and Track appointments with just a few taps and touches. Apart from this Our Customer's receive notifications for Booking and Assigned Beautician via SMS when appointment are scheduled
+        100% TRANSPARENCY IN PRODUCTS We have only Genuine and Branded Products for our Customer's.Beautician apply sealed and unused products in front of Customer's.
+      </div>
+    </div>
+  </section>
+  <section class="white">
+
+      <section class="bgr">
+
+        <div class="vishal">
+          <div class="imeg">
+            <img class="mishon" src="images/mission.jpeg" alt="missionphoto">
+          </div>
+          <div class="text">
+            <h2 class="our">Our Mission
+            <hr class="kartik" style="width: 70%; margin-right:0;">
+            </h2>
+            <div>
+              <p>
+              We are dedicated to providing quality services to our customers at their places during the ongoing pandemic times and  with full precautions and safety</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    <section class="why_barbera">
+
+      <div class="ybarb">
+      <div class="head">
+
+        <h2>Why Barbera?</h2>
+      </div>
+      <hr class="kartik" style="width: 60%">
+      <div class="matter">
+        <div class="trained">
+          <div class="imag">
+            <img src="https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="trainphoto">
+          </div>
+          <div class="text1">
+            <h2 style="font-size:31px;">Highly trained and experienced professionals
+
+          </h2>
+            <p>
+              We have Experienced & Premium beauty professionals in the list of Yes MADAM. All beautician come on-board  pass our standard and cosmetics test.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="sanitation">
+          <div class="imag">
+            <img src="https://images.pexels.com/photos/3951389/pexels-photo-3951389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="sanitationphoto">
+          </div>
+          <div class="text2">
+            <h2 style="font-size:31px;">Cleaning and sanitisation
+
+            </h2>
+            <p>
+              To protect yourself and your patients, from coronavirus (COVID-19) it is important to maintain good hygiene and a clean workplace. Follow the guidelines for personal hygiene, routine cleaning, disinfecting, terminal cleaning, and protective gear.
+            </p>
+          </div>
+        </div>
+
+        <div class="qualityequipment">
+          <div class="imag">
+            <img src="https://images.pexels.com/photos/3992855/pexels-photo-3992855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="sanitationphoto">
+          </div>
+          <div class="text3">
+            <h2 style="font-size:31px;">Quality Equipment
+
+            </h2>
+            <p>
+              To protect yourself and your patients, from coronavirus (COVID-19) it is important to maintain good hygiene and a clean workplace. Follow the guidelines for personal hygiene, routine cleaning, disinfecting, terminal cleaning, and protective gear.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!--  <div class="position-relative z-index-1 overflow-hidden padding-y-xl bg-contrast-lower">
+  <div class="margin-bottom-lg">
+    <h1 class="text-center">Vertical Timeline</h1>
+  </div>
+timeline
+  <div class="container max-width-adaptive-lg">
+    <div class="v-timeline js-v-timeline" data-animation="on">
+      <section class="v-timeline__section js-v-timeline__section">
+        <div class="v-timeline__marker bg-contrast-high border border-3 border-contrast-lower" aria-hidden="true"></div>
+
+        <div class="v-timeline__items-group">
+          <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+            <div class="v-timeline__date margin-bottom-sm">
+              <time class="v-timeline__date-value" datetime="2020-03-18T00:00">Mar 18, 2020</time>
+            </div>
+
+            <div class="text-component">
+              <h2>Title of item 1</h2>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic dicta, quos reprehenderit quidem omnis officiis fuga nostrum.</p>
+            </div>
+
+            <div class="margin-top-md">
+              <a class="btn btn--primary" href="#0">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="v-timeline__section js-v-timeline__section">
+        <div class="v-timeline__marker bg-contrast-high border border-3 border-contrast-lower" aria-hidden="true"></div>
+
+        <div class="v-timeline__items-group">
+          <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+            <div class="v-timeline__date margin-bottom-sm">
+              <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Mar 26, 2020</time>
+            </div>
+
+            <div class="text-component">
+              <h2>Title of item 2</h2>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam eveniet earum ad ratione reprehenderit nihil, mollitia adipisci cum eaque?</p>
+            </div>
+
+            <div class="margin-top-md">
+              <a class="btn btn--primary" href="#0">Read More</a>
+            </div>
+          </div>
+
+          <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+            <div class="text-component">
+              <h2>Title of item 3</h2>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, totam.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="v-timeline__section js-v-timeline__section">
+        <div class="v-timeline__marker bg-contrast-high border border-3 border-contrast-lower" aria-hidden="true"></div>
+
+        <div class="v-timeline__items-group">
+          <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+            <div class="v-timeline__date margin-bottom-sm">
+              <time class="v-timeline__date-value" datetime="2020-04-08T00:00">Apr 08, 2020</time>
+            </div>
+
+            <div class="text-component">
+              <h2>Title of item 4</h2>
+
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi praesentium dolore debitis cum nesciunt cumque placeat voluptatibus natus, necessitatibus numquam sunt, laborum possimus id?</p>
+
+              <figure class="text-component__block">
+                <img src="../../../app/assets/img/vertical-timeline-img-1.jpg" alt="Image description">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="v-timeline__section js-v-timeline__section">
+        <div class="v-timeline__marker bg-contrast-high border border-3 border-contrast-lower" aria-hidden="true"></div>
+
+        <div class="v-timeline__items-group">
+          <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+            <div class="v-timeline__date margin-bottom-sm">
+              <time class="v-timeline__date-value" datetime="2020-05-17T00:00">May 17, 2020</time>
+            </div>
+
+            <div class="text-component">
+              <h2>Title of item 5</h2>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic dicta, quos reprehenderit quidem omnis officiis fuga nostrum.</p>
+
+              <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+              </ul>
+            </div>
+
+            <div class="margin-top-md">
+              <a class="btn btn--primary" href="#0">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="v-timeline__section js-v-timeline__section">
+        <div class="v-timeline__marker bg-contrast-high border border-3 border-contrast-lower" aria-hidden="true"></div>
+
+        <div class="v-timeline__items-group">
+          <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+            <div class="v-timeline__date margin-bottom-sm">
+              <time class="v-timeline__date-value" datetime="2020-06-01T00:00">Jun 01, 2020</time>
+            </div>
+
+            <div class="text-component">
+              <h2>Title of item 6</h2>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic dicta, quos reprehenderit quidem omnis officiis fuga nostrum.</p>
+            </div>
+
+            <div class="margin-top-md">
+              <a class="btn btn--primary" href="#0">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>-->
+
+<!--  <div class="container">
+              <h2><center>Our story</center></h2>
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="main-timeline8">
+                          <div class="timeline">
+                              <span class="timeline-icon"></span>
+                              <span class="year">2017</span>
+                              <div class="timeline-content">
+                                  <h3 class="title">Web Desginer</h3>
+                                  <p class="description">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit. Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="timeline">
+                              <span class="timeline-icon"></span>
+                              <span class="year">2016</span>
+                              <div class="timeline-content">
+                                  <h3 class="title">Web Developer</h3>
+                                  <p class="description">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit. Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="timeline">
+                              <span class="timeline-icon"></span>
+                              <span class="year">2015</span>
+                              <div class="timeline-content">
+                                  <h3 class="title">Web Desginer</h3>
+                                  <p class="description">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit. Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="timeline">
+                              <span class="timeline-icon"></span>
+                              <span class="year">2014</span>
+                              <div class="timeline-content">
+                                  <h3 class="title">Web Developer</h3>
+                                  <p class="description">
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis justo id pulvinar suscipit. Pellentesque rutrum vehicula erat sed dictum. Integer quis turpis magna. Suspendisse tincidunt elit at erat tincidunt, vel vulputate arcu dapibus. Etiam accumsan ornare posuere. Nullam est.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>-->
+
+
+<!--
+          <body translate="no" >
+                    <div class="timeline-container" id="timeline-1">
+                    <div class="timeline-header">
+                      <h2 class="timeline-header__title">Our Story</h2>
+                    </div>
+                    <div class="timeline">
+                      <div class="timeline-item" data-text="FATHER OF THE TURKS">
+                        <div class="timeline__content"><img class="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg"/>
+                          <h2 class="timeline__content-title">1881</h2>
+                          <p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
+                        </div>
+                      </div>
+                      <div class="timeline-item" data-text="FATHER OF THE TURKS">
+                        <div class="timeline__content"><img class="timeline__img" src="http://gazetemanifesto.com/wp-content/uploads/2015/11/mustafa-kemal.jpg"/>
+                          <h2 class="timeline__content-title">1893</h2>
+                          <p class="timeline__content-desc">First enrolled in a traditionalreligious school, he soon switched to a modern school. In 1893, he entered a military highschool where his mathematics teacher gave him the second name Kemal (meaning perfection)in recognition of young Mustafa's superior achievement.</p>
+                        </div>
+                      </div>
+                      <div class="timeline-item" data-text="FATHER OF THE TURKS">
+                        <div class="timeline__content"><img class="timeline__img" src="http://www.volpeypir.com/upload/3732.jpg"/>
+                          <h2 class="timeline__content-title">1905</h2>
+                          <p class="timeline__content-desc">In 1905, Mustafa Kemal graduated from the War Academy in Istanbul with the rank of Staff Captain. Posted in Damascus, he started with several colleagues, a clandestinesociety called "Homeland and Freedom" to fight against the Sultan'sdespotism.</p>
+                        </div>
+                      </div>
+                      <div class="timeline-item" data-text="FATHER OF THE TURKS">
+                        <div class="timeline__content"><img class="timeline__img" src="http://cdn.yemek.com/uploads/2014/11/ataturk-10-kasim.jpg"/>
+                          <h2 class="timeline__content-title">1908</h2>
+                          <p class="timeline__content-desc">In 1908 he helped the group of officers who toppled the Sultan. Mustafa Kemal'scareer flourished as he won his heroism in the far corners of the Ottoman Empire,including Albania and Tripoli. He also briefly served as a staff officer in Salonica andIstanbul and as a military attache in Sofia.</p>
+                        </div>
+                      </div>
+                      <div class="timeline-item" data-text="FATHER OF THE TURKS">
+                        <div class="timeline__content"><img class="timeline__img" src="http://ataturk.istanbul.gov.tr/GalleryLibrary/12.jpg"/>
+                          <h2 class="timeline__content-title">1915</h2>
+                          <p class="timeline__content-desc">In 1915, when Dardanelles campaign was launched, Colonel Mustafa Kemal became anational hero by winning successive victories and finally repelling the invaders.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+  <div class="steps">
+    <div class="tbox1">
+      <h2 class="book">Steps to book our services</h2>
+      <hr class="kartik" style="width:70%; margin-left: 140px;">
+      <p>
+        <ul class="list" style="list-style-type: none;">
+          <li>Download our app from the playstore, and book the service following the steps.</li>
+          <li>You can schedule your booking at your priority time and date.</li>
+          <li>You can later pay for the service,via UPI or cash.</li>
+        </ul>
+        <button class="boy"><a href="https://play.google.com/store/apps/details?id=com.barbera.barberaconsumerapp&hl=en_IN&gl=US"target="_blank">
+        <img class="app" src="images/playstore.png" alt="app"></a></button>
+      </p>
+    </div>
+    <!-<div class="tbox2">
+      <img class="clg"src="images/clg new.png" alt="app1">
+    </div> --
+    <section id="phone_app">
+      <img class="outer" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Nexus_6P_%E6%A8%A1%E5%9E%8B.png" alt="" >
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <!--<div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>--
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://image.winudf.com/v2/image1/Y29tLmJhcmJlcmEuYmFyYmVyYWNvbnN1bWVyYXBwX3NjcmVlbl8xXzE2MDM1MTcyOTRfMDY0/screen-1.jpg?fakeurl=1&type=.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://play-lh.googleusercontent.com/1E33qxK09D_kiqJwP51Zae0nXYiXViAJz1IUjXCqmyEjMj9ISDVlq3_s9TvkfEoaSEM=w1536-h696-rw" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://eastceylon.com/images/2021/07/25/barberta_home.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+</section>-->
+
+<!--    <hr> -->
+      <div class="team">
+      <h2 class="our-team">Our Team</h2>
+      <div class="content">
+      <div class="sumit">
+        <div class="photo">
+          <img src="team/sumit kumawat new.png" alt="sumit photo">
+        </div>
+        <p class="sumitname">Sumit Kumawat
+          <a href="https://www.linkedin.com/in/sumit-kumawat-837677183/"target="_blank">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/v1501600118/web-assets/about-page/icon-linkedin.png" alt="sumitlk"
+            style="margin-left: 10px;">
+          </a>
+        </p>
+        <p class="abt sumit">
+        </p>
+      </div>
+      <div class="himanshu">
+        <div class="photo">
+          <img src="team/himanshu pandey new.png" alt="himanshu photo">
+        </div>
+        <p class="himanshuname">Himanshu Pandey
+          <a href="https://www.linkedin.com/in/sumit-kumawat-837677183/"target="_blank">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/v1501600118/web-assets/about-page/icon-linkedin.png" alt="sumitlk"
+            style="margin-left: 10px;">
+          </a>
+        </p>
+        <p class="abt sumit">
+        </p>
+      </div>
+      <div class="ankit">
+        <div class="photo">
+          <img src="team/ankit kumar new.png" alt="ankit photo">
+        </div>
+        <p class="ankitname" style="margin-left: 20px;">Ankit Kumar
+
+
+          <a href="https://www.linkedin.com/in/sumit-kumawat-837677183/"target="_blank">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/v1501600118/web-assets/about-page/icon-linkedin.png" alt="sumitlk"
+            style="margin-left: 10px;">
+            &nbsp&nbsp</a>
+        </p>
+        <p class="abt ankit">
+        </p>
+      </div>
+      <div class="anand">
+        <div class="photo">
+          <img src="team/anand kishore new.png" alt="anand photo">
+        </div>
+        <p class="anandname">Anand Kishore
+          <a href="https://www.linkedin.com/in/sumit-kumawat-837677183/"target="_blank">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/v1501600118/web-assets/about-page/icon-linkedin.png" alt="sumitlk"
+            style="margin-left: 10px;">
+          </a>
+        </p>
+        <p class="abt anand">
+        </p>
+      </div>
+      <div class="abdul">
+        <div class="photo">
+          <img src="team/abdul wahid new.png" alt="abdul photo">
+        </div>
+        <p class="abdulname">Abdul Wahid
+          <a href="https://www.linkedin.com/in/sumit-kumawat-837677183/"target="_blank">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/v1501600118/web-assets/about-page/icon-linkedin.png" alt="sumitlk"
+            style="margin-left: 10px;">
+          </a>
+        </p>
+        <p class="abt abdul">
+        </p>
+      </div>
+    </div>
+      </div>
+      <!--
+      <table align = "center">
+        <tr>
+          <div class="tem">
+        <td><img src="team/sumit kumawat.jpg" alt="sumit"></td>
+        <td><img src="team/himanshu pandey.png" alt="himanshu"></td>
+        <td><img src="team/ankit kumar.png" alt="ankit"></td>
+        <td><img src="team/anand kishore.png" alt="anand"></td>
+        <td><img src="team/abdul wahid.png" alt="abdul"></td>
+          </div>
+        </tr>
+        <tr>
+          <td><h4>Sumit Kumawat</h4></td>
+          <td><h4>Himanshu Pandey</h4></td>
+          <td><h4>Ankit Kumar</h4></td>
+          <td><h4>Anand Kishore</h4></td>
+          <td><h4>Abdul Wahid</h4></td>
+        </tr>
+      </table> -->
+    </div>
+
+    <!--  <hr>
+<!--      <div class="social" >
+        <h2 class="soshial">Stay updated on our social media handles-
+      <a href= "https://www.facebook.com/BarberaOnlineSalon/" target="_blank">
+        <img class="fbk" src="images/fb.png" alt="fb">
+      </a>
+      <a href= "https://www.instagram.com/barbera_online_salon/" target="_blank">
+          <img class="igm" src="images/ig.png" alt="ig">
+        </a>
+      <a href="https://www.linkedin.com/company/barbera2021/" target="_blank">
+          <img class="lkn" src="images/lk.png" alt="lk">
+        </a>
+      </h2>
+    </div>
+
+  <table>
+  <tr>
+    <td>
+    <h4><a href= "https://www.facebook.com/BarberaOnlineSalon/" target="_blank">
+      <img class="fbk" src="fb new.png" alt="fb">
+    </a></h4></td>
+  <td><h4><a href= "https://www.instagram.com/barbera_online_salon/" target="_blank">
+      <img class="igm" src="ig new.png" alt="ig">
+    </a></h4></td>
+  <td><h4><a href="https://www.linkedin.com/company/barbera2021/" target="_blank">
+      <img class="lkn" src="lk new.png" alt="lk">
+    </a></h4></td>
+  </tr>
+</table>-->
+<footer id="footer">
+  <div id="foot">
+      <div class="box">
+        <ul>
+        <li><a href="#priavcy policy">Privacy Policy</a><li>
+        <li><a href="#terms of condition">Terms and Conditions</a><li>
+        <li><a href="faq">FAQ's</a><li>
+        </ul>
+      </div>
+      <hr class="kartik">
+        <div class="box">
+            <h1 class="serve">Serving in:</h1>
+            <ul>
+                <li>Jaipur</li>
+          <!--      <li>City 2</li>
+                <li>City 3</li>
+                <li>City 4</li>
+                <li>City 5</li>
+                <li>City 6</li>
+                <li>City 7</li>
+                <li>City 8</li>-->
+            </ul>
+        </div>
+        <hr class="kartik">
+        <!--<div class="box">
+            <h1>Social Media:</h1>
+            <ul>
+                <li class="item"><a href="https://www.instagram.com/barbera_online_salon/">Instagram</a></li>
+                <li class="item"><a href="#">Facebook</a></li>
+                <li class="item"><a href="#">Twitter</a></li>
+                <li class="item"><a href="#">Youtube</a></li>
+            </ul>
+        </div> -->
+        <div class="box">
+            <h1><a href="#">Contact Us:</a></h1>
+            <ul>
+                <li>Phone Number: 9876452823</li>
+                <li><a href="#">Gmail: barbera@gmail.com</a></li>
+            </ul>
+        </div>
+        <!--<div class="box">
+            <h1>Any Suggestions or Queries...Just Drop a Message!!</h1>
+        <form class="form_box">
+            <input type="text" class="formde" id="fname" placeholder="Name*">
+            <input type="email" class="formde" id="femail" placeholder="E-mail*">
+            <textarea name="message" id="msg" rows="8" cols="40" class="formde" placeholder="Enter Your Message*"></textarea>
+            <button class="submit_btn" type="submit">SUBMIT NOW</button>
+        </form>
+        </div>-->
+        <div class="box">
+            <p class="follow">Follow Us</p>
+            <div class="icon_bar">
+                <button class="icon_btn" id="insta" onclick="window.open('https://www.instagram.com/barbera_online_salon/','_blank')"></button>
+                <button class="icon_btn" id="facebook" onclick="window.open('https://www.facebook.com/BarberaOnlineSalon/','_blank')"></button>
+                <button class="icon_btn" id="linkedin" onclick="window.open('https://www.linkedin.com/company/barbera2021/','_blank')"></button>
+
+              <!--  <button class="icon_btn" id="twitter"></button>
+                <button class="icon_btn" id="pintrest"></button>
+                <button class="icon_btn" id="youtube"></button> -->
+            </div>
+        </div>
+        <hr class="kartik">
+    </div>
+     <p class="fut">&copy; Barbera 2021 </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--Navigation Bar for mobiles and table -->
+<script>
+//To change Burger icon to cross
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+    //Navigation Bar for mobiles and table
+    burger = document.querySelector('.burger')
+    navbar = document.querySelector('.navbar')
+    navList = document.querySelector('.nav-list')
+
+    burger.addEventListener('click', ()=>{
+    navList.classList.toggle('v-class-resp');
+    navbar.classList.toggle('h-nav-resp');
+    })
+// File#: _1_vertical-timeline
+// Usage: codyhouse.co/license
+(function() {
+	var VTimeline = function(element) {
+    this.element = element;
+    this.sections = this.element.getElementsByClassName('js-v-timeline__section');
+    this.animate = this.element.getAttribute('data-animation') && this.element.getAttribute('data-animation') == 'on' ? true : false;
+    this.animationClass = 'v-timeline__section--animate';
+    this.animationDelta = '-150px';
+    initVTimeline(this);
+  };
+
+  function initVTimeline(element) {
+    if(!element.animate) return;
+    for(var i = 0; i < element.sections.length; i++) {
+      var observer = new IntersectionObserver(vTimelineCallback.bind(element, i),
+      {rootMargin: "0px 0px "+element.animationDelta+" 0px"});
+		  observer.observe(element.sections[i]);
+    }
+  };
+
+  function vTimelineCallback(index, entries, observer) {
+    if(entries[0].isIntersecting) {
+      Util.addClass(this.sections[index], this.animationClass);
+      observer.unobserve(this.sections[index]);
+    }
+  };
+
+  //initialize the VTimeline objects
+  var timelines = document.querySelectorAll('.js-v-timeline'),
+    intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype),
+    reducedMotion = Util.osHasReducedMotion();
+	if( timelines.length > 0) {
+		for( var i = 0; i < timelines.length; i++) {
+      if(intersectionObserverSupported && !reducedMotion) (function(i){new VTimeline(timelines[i]);})(i);
+      else timelines[i].removeAttribute('data-animation');
+		}
+	}
+}());
+</script>
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script id="rendered-js" >
+(function ($) {
+$.fn.timeline = function () {
+var selectors = {
+  id: $(this),
+  item: $(this).find(".timeline-item"),
+  activeClass: "timeline-item--active",
+  img: ".timeline__img" };
+
+selectors.item.eq(0).addClass(selectors.activeClass);
+selectors.id.css(
+"background-image",
+"url(" +
+selectors.item.
+first().
+find(selectors.img).
+attr("src") +
+")");
+
+var itemLength = selectors.item.length;
+$(window).scroll(function () {
+  var max, min;
+  var pos = $(this).scrollTop();
+  selectors.item.each(function (i) {
+    min = $(this).offset().top;
+    max = $(this).height() + $(this).offset().top;
+    var that = $(this);
+    if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+      selectors.item.removeClass(selectors.activeClass);
+      selectors.id.css(
+      "background-image",
+      "url(" +
+      selectors.item.
+      last().
+      find(selectors.img).
+      attr("src") +
+      ")");
+
+      selectors.item.last().addClass(selectors.activeClass);
+    } else if (pos <= max - 40 && pos >= min) {
+      selectors.id.css(
+      "background-image",
+      "url(" +
+      $(this).
+      find(selectors.img).
+      attr("src") +
+      ")");
+
+      selectors.item.removeClass(selectors.activeClass);
+      $(this).addClass(selectors.activeClass);
+    }
+  });
+});
+};
+})(jQuery);
+
+$("#timeline-1").timeline();
+//# sourceURL=pen.js
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--back to top-->
+<script>
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+  </body>
+</html>
