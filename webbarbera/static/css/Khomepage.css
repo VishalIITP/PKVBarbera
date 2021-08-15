@@ -133,7 +133,7 @@ margin-left: 10px;
 }
 #offer .btn_offers{
 display: block;
-align: center;
+text-align: center;
 font-size: 1rem;
 padding: 5px;
 margin: auto;
@@ -388,7 +388,7 @@ color: white;
 /*Services*/
 #services{
 /*    border: 2px solid brown;*/
-background-color: #f1f1f1
+background-color: #f1f1f1;
 height: 890px;
 }
 #ser{

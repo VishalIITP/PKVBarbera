@@ -124,6 +124,7 @@
   color: white;
 }
 .current{
+  text-decoration: underline;
   text-underline-position: under;
 }
 #home_icon{
