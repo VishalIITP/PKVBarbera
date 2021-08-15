@@ -134,11 +134,7 @@
 .nav_icon p {
   color: white;
 }
-<<<<<<< HEAD
-.current{
-=======
 .current {
->>>>>>> 432131f0f7d13f2fd6917831465f7ec9c53cf559
   text-decoration: underline;
   text-underline-position: under;
 }
