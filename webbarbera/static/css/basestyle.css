@@ -1,3 +1,6 @@
+#black_top{
+  display: none;
+}
 /*Navigation Bar*/
 
 .signup {
@@ -31,6 +34,7 @@
   left: 10px;
   border-radius: 50px;
   margin-left: 5%;
+  z-index: 50;
 }
 .logo img {
   width: 50px;
@@ -41,7 +45,7 @@
   position: fixed;
   top: 2px;
   left: 15px;
-  z-index: 20;
+  z-index: 50;
 }
 .navbar {
   display: flex;
@@ -52,6 +56,7 @@
   cursor: pointer;
   height: 70px;
   width: 100%;
+  z-index: 30;
 }
 .navbar hr {
   display: none;
@@ -83,7 +88,7 @@
   background: black;
   background-size: cover;
   background-blend-mode: darken;
-  z-index: 3;
+  z-index: 30;
 }
 .burger {
   display: none;
@@ -379,6 +384,15 @@
   }
   .logo {
     top: 22px;
+  }
+  #black_top{
+    display: block;
+    position: fixed;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    z-index: 30;
   }
 }
 hr {

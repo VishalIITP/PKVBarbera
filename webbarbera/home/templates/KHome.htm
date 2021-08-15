@@ -13,10 +13,25 @@
 {%block csslink%}
 <link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
 <link rel="stylesheet" href="{% static 'css/Khomepage.css' %}">
-
+<!--Testimonial Section-->
+<meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
 {% endblock csslink%}
 
-{%block scriptlink%}{% endblock scriptlink%}
+{%block scriptlink%}
+<!--Testimonial Section Script-->
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+      <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+{% endblock scriptlink%}
 
 
 
@@ -129,119 +144,6 @@
         </div>
 </section>
 
-<!--Services Section-->
-<!--<section id="services">
-         <div class="heading_box">
-         <h1 class="head-pri">SERVICES</h1>
-         <hr>
-         </div>
-         <div id="ser">-->
-<!--Male-->
-<!-- <div class="box">
-             <div class="main">
-             <div class="container">
-             <button class="medbtn" id="btn_male"></button>
-             <p>MEN</p>
-             </div>
-             </div>
-             <div class="icon">
-             <div class="icon_text">
-             <button class="icon_btn" id="m_1"></button>
-             <p>HAIRCUT</p>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="m_2"></button>
-             <p>SHAVING</p>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="m_3"></button>
-             <p>HAIR COLOR</p>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="m_4"></button>
-             <p>FACIAL</p>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="m_5"></button>
-             <p>HEAD MASSAGE</p>
-             </div>
-             </div>
-         </div>
- <hr>-->
-<!--Female-->
-<!-- <div class="box">
-             <div class="main">
-             <div class="container">
-             <button class="medbtn" id="btn_female"></button>
-             <p>WOMEN</p>
-             </div>
-             </div>
-             <div class="icon">
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_1"></button>
-             <p>HAIRCUT</p>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_2"></button>
-             <P>HAIR CARE</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_3"></button>
-             <P>HAIR COLOR</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_4"></button>
-             <P>THREADING</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_5"></button>
-             <P>FACIAL</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_6"></button>
-             <P>WAXING</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_7"></button>
-             <p>MEHANDI</p>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="fm_8"></button>
-             <p>BLEACH</p>
-             </div>
-             </div>
-         </div>
- <hr>-->
-<!--Wedding PACKAGES-->
-<!-- <div class="box">
-             <div class="main">
-             <div class="container">
-             <button class="medbtn" id="btn_wedding"></button>
-             <p>WEDDING<br> PACKAGES</p>
-             </div>
-             </div>
-             <div class="icon">
-             <div class="icon_text">
-             <button class="icon_btn" id="wed_1"></button>
-             <P>BRIDE</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="wed_2"></button>
-             <P>GROOM</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="wed_3"></button>
-             <P>MEHANDI</P>
-             </div>
-             <div class="icon_text">
-             <button class="icon_btn" id="wed_4"></button>
-             <P>MAKE-UP</P>
-             </div>
-             </div>
-         </div>
-         </div>
-     </section>-->
-
 <!--Why Barbera-->
 <section id="choose">
     <h1 class="head-pri" width="100%" align="center">WHY BARBERA??</h1>
@@ -273,128 +175,73 @@
     </div>
 </section>
 
-<!--Testimonials-->
-<section id="customer-reviews">
-    <section class="head-pri" id="testimonial-head">
-        <h1>TESTIMONIALS</h1>
-        <hr>
-    </section>
-    <section class="spacer">
-        <div class="testimonial-section">
-            <div class="testi-user-img">
-                <div class="swiper-container gallery-thumbs">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <img class="u3" src="https://md-aqil.github.io/images/2091127763_1_1_1.jpg" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img class="u1" src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg"
-                                alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img class="u2"
-                                src="https://md-aqil.github.io/images/attractive-beautiful-beauty-1986684.jpg" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img class="u4" src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg"
-                                alt="">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="user-saying">
-                <div class="swiper-container testimonial">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper ">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="quote">
-                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
-                                <p>
-                                    “This is best and biggest unified platform
-                                    for instant online admission. We can easily
-                                    take admission for any course in any institute..“
-                                </p>
-                                <div class="name">-Ramkishor Verma-</div>
-                                <div class="designation">University Student</div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="quote">
-                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
-
-                                <p>
-                                    “This is best and biggest unified platform
-                                    for instant online admission. We can easily
-                                    take admission for any course in any institute..“
-                                </p>
-                                <div class="name">-Ramkishor Verma-</div>
-                                <div class="designation">University Student</div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="quote">
-                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
-
-                                <p>
-                                    “This is best and biggest unified platform
-                                    for instant online admission. We can easily
-                                    take admission for any course in any institute..“
-                                </p>
-                                <div class="name">-Ramkishor Verma-</div>
-                                <div class="designation">University Student</div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="quote">
-                                <img class="quote-icon" src="https://md-aqil.github.io/images/quote.png" alt="">
-
-                                <p>
-                                    “This is best and biggest unified platform
-                                    for instant online admission. We can easily
-                                    take admission for any course in any institute..“
-                                </p>
-                                <div class="name">-Ramkishor Verma-</div>
-                                <div class="designation">University Student</div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination swiper-pagination-white"></div>
-
-                </div>
-            </div>
+ <!--Testimonials-->
+ <section id="customer-reviews">
+    <div class="gtco-testimonials">
+  <h2 id="testimonial-head">Testimonials</h2>
+  <hr class="test_hr">
+  <div class="owl-carousel owl-carousel1 owl-theme">
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300" alt="">
+        <div class="card-body">
+          <h5>Ronne Galle <br />
+            <span> Project Manager </span>
+          </h5>
+          <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat ” </p>
         </div>
-    </section>
-</section>
+      </div>
+    </div>
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301" alt="">
+        <div class="card-body">
+          <h5>Missy Limana<br />
+            <span> Engineer </span>
+          </h5>
+          <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat ” </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302" alt="">
+        <div class="card-body">
+          <h5>Martha Brown<br />
+            <span> Project Manager </span>
+          </h5>
+          <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat ” </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card text-center"><img class="card-img-top" src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303" alt="">
+        <div class="card-body">
+          <h5>Hanna Lisem<br />
+            <span> Project Manager </span>
+          </h5>
+          <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+            impedit quo minus id quod maxime placeat ” </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </section>
 
+<!--Gallery-->
 
 <section id="gallery">
     <div class="block-schedule overlay site-section">
-        <div class="container" id="abt">
-
-
-            <div class="heading-with-border">
-                <h2 class="head-pri" style="font-family: 'Livvic', sans-serif;">
-                    <strong>
-                        <div class="prevspons">
-                            <br>
-                            Glimpses of our Services
-                        </div>
-                    </strong>
-
-                </h2><br>
-            </div>
+      <div class="container" id="abt">
+          <div class="heading-with-border">
+            <h2 class="head-pri" id="gallery_head" style="font-family: 'Livvic', sans-serif;">
+            <strong>
+               Glimpses of our Services</strong>
+            </h2>
+            <br>
+            <hr id="gal_hr">
+        </div>
 
 
 
@@ -836,16 +683,46 @@
 
     }
 </script>
-<!--<script>
-     window.onscroll = function() {scrollFunction()};
- function scrollFunction() {
-   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-     document.getElementById("navbar").style.background = "#000000";
-   } else {
-     document.getElementById("navbar").style.background = "none";
-   }
- }
- </script>-->
+
+<!-- Testimonial Section JS -->
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+    <script id="rendered-js" >
+(function () {
+"use strict";
+
+var carousels = function () {
+  $(".owl-carousel1").owlCarousel({
+    loop: true,
+    center: true,
+    margin: 0,
+    responsiveClass: true,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false },
+
+      680: {
+        items: 2,
+        nav: false,
+        loop: false },
+
+      1000: {
+        items: 3,
+        nav: true } } });
+
+
+
+};
+
+(function ($) {
+  carousels();
+})(jQuery);
+})();
+
+  </script>
 
 
 
