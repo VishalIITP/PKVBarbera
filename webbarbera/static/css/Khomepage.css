@@ -138,26 +138,8 @@ body{
     /*border: 10px solid green;*/
 }
 #offer .btn_offers{
-<<<<<<< HEAD
-display: block;
-text-align: center;
-font-size: 1rem;
-padding: 5px;
-margin: auto;
-/* border-radius: 10px;*/
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;
-background-color: #bebcbc;
-width: 300px;
-height: 100px;
-color: black;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Inder', sans-serif;
-border:none;
-
 
 /*border: 2px solid black;*/
-=======
     display: block;
     align: center;
     font-size: 1rem;
@@ -175,8 +157,7 @@ border:none;
     border:none;
 
 
-    /*border: 2px solid black;*/
->>>>>>> 432131f0f7d13f2fd6917831465f7ec9c53cf559
+    
 }
 
 #offer .box1{
@@ -398,7 +379,7 @@ border:none;
 /*Services*/
 #services{}
 /*    border: 2px solid brown;*/
-    background-color: #f1f1f1;
+    background-color: #f1f1f1 ;
     height: 890px;
 }
 #ser{
