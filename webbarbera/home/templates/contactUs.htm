@@ -1,250 +1,157 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <link rel="icon" href="https://barbera.netlify.app/nikita.jpeg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
-    <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% extends "base.htm" %}
+{% load static%}
+
+{% block title%}About Us-Barbera{% endblock title%}
 
 
 
-    <title>About Barbera</title>
-    <link rel="stylesheet" href="../../static/css/contactUsstyle.css">
-  <!--  <img class="barbera circular" src="barbera new.png" alt="Barbera profile picture" style="top: 0">
+
+
+{% block activateHome %}current{% endblock activateHome %}
+
+
+{%block csslink%}
+<link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
+<link rel="mask-icon" type=""
+  href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+  color="#111" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="stylesheet" href="../../static/css/contactUsstyle.css">
+
+{% endblock csslink%}
+
+{%block scriptlink%}
+
+<script>
+  window.console = window.console || function (t) { };
+</script>
+
+
+
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+{% endblock scriptlink%}
+
+
+
+
+<!--  <img class="barbera circular" src="barbera new.png" alt="Barbera profile picture" style="top: 0">
     <img class="border" src="border new.png" alt="border">-->
-    <script>
-    window.console = window.console || function(t) {};
-  </script>
 
-
-
-    <script>
-    if (document.location.search.match(/type=embed/gi)) {
-      window.parent.postMessage("resize", "*");
-    }
-  </script>
-  </head>
+</head>
 <!-- <body style="background-image: url('images/bg4.jpg');"> -->
-    <body>
-      <!--Back To top-->
-      <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
-  </button>
-      <a href="/homepage"><img src="https://barbera.netlify.app/nikita.jpeg" alt="logo" class="logo"></a>
-      <!--Navigation Bar-->
-      <nav class="navbar background h-nav-resp">
-        <ul class="nav-list v-class-resp">
-          <!--<div class="logo"><img src="https://barbera.netlify.app/nikita.jpeg" alt="logo"></div>-->
-          <div class="nav_icon">
-         <!-- <img src="https://us.123rf.com/450wm/fokaspokas/fokaspokas1804/fokaspokas180400063/98532451-a-house-icon-on-white-icon-on-black-background-.jpg?ver=6" alt="Home" id="home_icon">-->
-          <li><a href="/homepage">Home</a></li>
-          </div>
-          <hr>
-          <div class="nav_icon">
-          <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfglX2FUbxIF11BZiecgectkGhkjPsr4WFu2lUPEtYTIXt-Iq6uxultTxlyUZfl-SUHPY&usqp=CAU" alt="Services" id="services_icon">-->
-          <li><a href="/servicesPage">Services</a></li>
-          </div>
-          <hr>
-          <div class="nav_icon">
-            <!-- <img src="https://i.pinimg.com/originals/db/9c/66/db9c669ece4c0168bc0fc2076960a3b8.png" alt="Tips" id="tips_icon" style="margin-right: 4px;"> -->
-            <li><a href="/tipsPage">Tips</a></li>
-            </div>
-            <hr>   
-            <div class="nav_icon">
-              <!-- <img src="https://thumbs.dreamstime.com/b/shopping-icon-shopping-cart-icon-dark-background-simple-vector-icon-shopping-icon-shopping-cart-icon-dark-background-116659167.jpg" alt="Cart" id="cart_icon" style="margin-right: 4px;"> -->
-              <li><a href="#">Cart</a></li>
-              </div>
-              <hr>
-          <div class="nav_icon">
-          <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8sksWlhY2C3peMqclAzuHm4z0-_kv7IR7rQ&usqp=CAU" alt="AboutUs" id="about_icon">-->
-          <li><a href="aboutUs">About Us</a></li>
-          </div>
-          <hr>
-          <div class="nav_icon current">
-          <!-- <img src="https://i.pinimg.com/originals/22/52/5e/22525e1af533b224bd2314e1126ead4f.jpg" alt="Contact" id="contact_icon">-->
-          <li><a href="contactUsPage">Contact Us</a></li>
-          </div>
-          <hr>
+
+<body>
 
 
-          <!--<div class="nav_icon">
-          <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-gallery-icon-png-image_4316074.jpg" alt="Bookings">
-          <li><a href="#">Gallery</a></li>
-          </div>
-          <hr>-->
-          <div class="nav_icon" id="sign">
-          <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xvPVwE-_sU3RrWJrI_88gIAysvHpFqaZaqmp22hCDwXFBRHqqRQQ0Mi17qR1JuBr1TQ&usqp=CAU" alt="SignIn" class="sign_icon"> -->
-          <li><a href="#">Sign Up</a></li>
-          </div>
+  {% block body%}
 
-      </ul>
-          <!--Side Option For small screens-->
-          <div class="burger" onclick="myFunction(this)">
-              <div class="line" id="bar1"></div>
-              <div class="line" id="bar2"></div>
-              <div class="line" id="bar3"></div>
-          </div>
-             <div class="nav_icon" id="login">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xvPVwE-_sU3RrWJrI_88gIAysvHpFqaZaqmp22hCDwXFBRHqqRQQ0Mi17qR1JuBr1TQ&usqp=CAU" alt="SignIn" class="sign_icon">
-              <li><a href="#">Sign Up</a></li>
-              </div>
-      </nav>
-      <div>
-      <div class="svg-wrapper ctntabt">
+  <div class="svg-wrapper ctntabt">
     <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
       <rect class="shape" height="60" width="320" />
     </svg>
-     <div class="texth">Contact Us</div>
+    <div class="texth">Contact Us</div>
   </div>
-</div>
-      <div class="ctnt">
-        <div class="dono">
-        <div class="send">
-          <div class="send1">
-            <h3>Send us a message</h3>
-            <form class="foram">
-              <input  formcontrolname="name" name="name" placeholder="Enter your full name" type="text" class="ng-untouched ng-pristine ng-invalid"><!----><!---->
-              <input  formcontrolname="email" name="email" placeholder="Enter your email" type="email" value="" class="ng-untouched ng-pristine ng-invalid"><!----><!---->
-              <input  formcontrolname="phone" maxlength="10" name="phone" placeholder="Enter your phone" type="number" value="" class="ng-untouched ng-pristine ng-invalid"><!----><!---->
-              <textarea  formcontrolname="query" name="query" placeholder="Enter your query with minumum 5 characters" class="ng-untouched ng-pristine ng-invalid"></textarea><!----><!---->
-              <div  style="display: flex; justify-content: center">
-              <button  class="sendBtn" type="submit">Send</button>
+  </div>
+  <div class="ctnt">
+    <div class="dono">
+      <div class="send">
+        <div class="send1">
+          <h3>Send us a message</h3>
+          <form class="foram">
+            <input formcontrolname="name" name="name" placeholder="Enter your full name" type="text"
+              class="ng-untouched ng-pristine ng-invalid">
+            <!---->
+            <!---->
+            <input formcontrolname="email" name="email" placeholder="Enter your email" type="email" value=""
+              class="ng-untouched ng-pristine ng-invalid">
+            <!---->
+            <!---->
+            <input formcontrolname="phone" maxlength="10" name="phone" placeholder="Enter your phone" type="number"
+              value="" class="ng-untouched ng-pristine ng-invalid">
+            <!---->
+            <!---->
+            <textarea formcontrolname="query" name="query" placeholder="Enter your query with minumum 5 characters"
+              class="ng-untouched ng-pristine ng-invalid"></textarea>
+            <!---->
+            <!---->
+            <div style="display: flex; justify-content: center">
+              <button class="sendBtn" type="submit">Send</button>
             </div>
           </form>
-          </div>
         </div>
-        <div class="info">
-          <h3>Visit our office</h3>
-          <p> Visit our office. We would love to hear from you. Drop us a message or give us a all with your queries, feedback or concerns</p>
-          <ul style="list-style-type: none;">
-            <li>
+      </div>
+      <div class="info">
+        <h3>Visit our office</h3>
+        <p> Visit our office. We would love to hear from you. Drop us a message or give us a all with your queries,
+          feedback or concerns</p>
+        <ul style="list-style-type: none;">
+          <li>
             <p>
               B-117, Block B, Sector 63,
               <br>
               Noida, Uttar Pradesh 201301
-            </p></li>
-            <li>
+            </p>
+          </li>
+          <li>
             <a _ngcontent-chw-c16="" href="mailto:support@yesmadam.com">support@yesmadam.com</a>
           </li>
           <li>
             <p>9418678900</p>
           </li>
-          </ul>
-        </div>
+        </ul>
       </div>
+    </div>
+  </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.38255881905!2d75.65046820574713!3d26.88544791976796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1628084561869!5m2!1sen!2sin"
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+   
+
+  {% endblock body%}
+
+
+
+  {% block rateUs %}
+
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col">
+
       </div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.38255881905!2d75.65046820574713!3d26.88544791976796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1628084561869!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>      <footer id="footer">
-        <div id="foot">
-            <div class="box">
-              <ul>
-              <li><a href="#priavcy policy">Privacy Policy</a><li>
-              <li><a href="#terms of condition">Terms and Conditions</a><li>
-              <li><a href="faq">FAQ's</a><li>
-              </ul>
-            </div>
-            <hr class="kartik">
-              <div class="box">
-                  <h1 class="serve">Serving in:</h1>
-                  <ul>
-                      <li>Jaipur</li>
-                <!--      <li>City 2</li>
-                      <li>City 3</li>
-                      <li>City 4</li>
-                      <li>City 5</li>
-                      <li>City 6</li>
-                      <li>City 7</li>
-                      <li>City 8</li>-->
-                  </ul>
-              </div>
-              <hr class="kartik">
-              <!--<div class="box">
-                  <h1>Social Media:</h1>
-                  <ul>
-                      <li class="item"><a href="https://www.instagram.com/barbera_online_salon/">Instagram</a></li>
-                      <li class="item"><a href="#">Facebook</a></li>
-                      <li class="item"><a href="#">Twitter</a></li>
-                      <li class="item"><a href="#">Youtube</a></li>
-                  </ul>
-              </div> -->
-              <div class="box">
-                  <h1><a href="contact.html">Contact Us:</a></h1>
-                  <ul class="contact">
-                      <li>Phone Number: 9876452823</li>
-                      <li><a href="#">Gmail: barbera@gmail.com</a></li>
-                  </ul>
-              </div>
-              <!--<div class="box">
-                  <h1>Any Suggestions or Queries...Just Drop a Message!!</h1>
-              <form class="form_box">
-                  <input type="text" class="formde" id="fname" placeholder="Name*">
-                  <input type="email" class="formde" id="femail" placeholder="E-mail*">
-                  <textarea name="message" id="msg" rows="8" cols="40" class="formde" placeholder="Enter Your Message*"></textarea>
-                  <button class="submit_btn" type="submit">SUBMIT NOW</button>
-              </form>
-              </div>-->
-              <div class="box">
-                  <p class="follow">Follow Us</p>
-                  <div class="icon_bar">
-                      <button class="icon_btn" id="insta" onclick="window.open('https://www.instagram.com/barbera_online_salon/','_blank')"></button>
-                      <button class="icon_btn" id="facebook" onclick="window.open('https://www.facebook.com/BarberaOnlineSalon/','_blank')"></button>
-                      <button class="icon_btn" id="linkedin" onclick="window.open('https://www.linkedin.com/company/barbera2021/','_blank')"></button>
+      <div class="col">
 
-                    <!--  <button class="icon_btn" id="twitter"></button>
-                      <button class="icon_btn" id="pintrest"></button>
-                      <button class="icon_btn" id="youtube"></button> -->
-                  </div>
-              </div>
-              <hr class="kartik">
-          </div>
-           <p class="fut">&copy; Barbera 2021 </p>
-      </footer>
+      </div>
+      <div class="col">
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <!--Navigation Bar for mobiles and table -->
-      <script>
-      //To change Burger icon to cross
-          function myFunction(x) {
-              x.classList.toggle("change");
-          }
-          //Navigation Bar for mobiles and table
-          burger = document.querySelector('.burger')
-          navbar = document.querySelector('.navbar')
-          navList = document.querySelector('.nav-list')
+      </div>
+      <div class="col">
+        <a class="goto" id="rate" href="/rate">Rate-Us</a>
+      </div>
+    </div>
+  </div>
 
-          burger.addEventListener('click', ()=>{
-          navList.classList.toggle('v-class-resp');
-          navbar.classList.toggle('h-nav-resp');
-          })
-        </script>
-        <!--back to top-->
-<script>
-  //Get the button
-  let mybutton = document.getElementById("btn-back-to-top");
-  
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-  // When the user clicks on the button, scroll to the top of the document
-  mybutton.addEventListener("click", backToTop);
-  
-  function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-  </script>
-          </body>
-        </html>
+
+
+
+
+
+
+
+
+
+
+
+
+  {%endblock rateUs%}

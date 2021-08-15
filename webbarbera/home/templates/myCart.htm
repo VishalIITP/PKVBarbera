@@ -4,7 +4,7 @@
 
 {% block title%}My Cart-Barbera{% endblock title%}
 
-{% block activatemyCart %}active{% endblock activatemyCart %}
+{% block activateCart %}current{% endblock activateCart %}
 
 
 
@@ -13,6 +13,8 @@
 <link id="changer" href="../../static/css/myCartcss.css" rel="stylesheet">{% endblock csslink%}
 
 {% block body%}
+
+<br><br><br><br><br>
 <h3 id="emptyCart">
 </h3>
 
@@ -67,13 +69,17 @@
         <div class="total-value final-value" id="basket-total">130.00</div>
       </div>
       <div class="summary-checkout">
-        <button class="checkout-cta">Go to Secure Checkout</button>
+        <!-- Button trigger modal -->
+
+
+        <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="checkout-cta">Go to Secure
+          Checkout</button>
       </div>
     </div>
   </aside>
 </main>
 <button id="clearCart" onclick="clearfunc()">Clear Cart</button>
-<a href="/homepage"> <button id="checkServices">Book Now</button></a>
+<a href="/servicesPage"> <button id="checkServices">Book Now</button></a>
 
 
 <script>

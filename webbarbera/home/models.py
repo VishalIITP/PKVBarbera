@@ -43,12 +43,30 @@ class reviewsModel(models.Model):
 class barberaServices(models.Model):
     ServiceID = models.AutoField(primary_key=True)
     serviceName = models.CharField(max_length=50, default="")
-    serviceCategory = models.CharField(max_length=50, default="")
-    serviceSubCategory = models.CharField(max_length=50, default="")
-    serviceImage = models.ImageField(
-        upload_to="home/images", height_field=None, width_field=None, )
-    servicePrice = models.CharField(max_length=50, default="0")
-    serviceDesc = models.CharField(max_length=300)
+    serviceImage = models.ImageField(upload_to="home/images", height_field=None, width_field=None, )
+    serviceCategory = models.CharField(max_length=50, default="0")
+    serviceCategoryDiscount = models.IntegerField(default="0")
+
+
+    serviceSubCategory1 = models.CharField(max_length=50, default="")
+    serviceSubCategory2 = models.CharField(max_length=50, default="")
+    serviceSubCategory3 = models.CharField(max_length=50, default="")
+   
+   
+    serviceSubCategory1Price = models.CharField(max_length=50, default="0")
+    serviceSubCategory2Price = models.CharField(max_length=50, default="0")
+    serviceSubCategory3Price = models.CharField(max_length=50, default="0")
+    
+    serviceSubCategory1Discount = models.CharField(max_length=50, default="0")
+    serviceSubCategory2Discount = models.CharField(max_length=50, default="0")
+    serviceSubCategory3Discount = models.CharField(max_length=50, default="0")
+   
+   
+    serviceSubCategory1Desc = models.CharField(max_length=300, default="Barbera")
+    serviceSubCategory2Desc = models.CharField(max_length=300, default="Barbera")
+    serviceSubCategory3Desc = models.CharField(max_length=300, default="Barbera")
+   
+   
     serviceUploadTime = models.DateTimeField()
 
     def __str__(self):

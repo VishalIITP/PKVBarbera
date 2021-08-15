@@ -37,15 +37,17 @@
 
     </div>
 </center> -->
+<br><br>
+  
 
-<button type="button" id="goodReview" onclick="goodShower()">Good Reviews</button>
+<!-- <button type="button" id="goodReview" onclick="goodShower()">Good Reviews</button>
 <button type="button" id="Reset" onclick="resetShower()">Reset</button>
-<button type="button" id="badReview" onclick="badShower()">Bad Reviews</button>
+<button type="button" id="badReview" onclick="badShower()">Bad Reviews</button> -->
 
 
 {% for x in allreviews %}
 <div class="my-5 " id="fullfeed{{forloop.counter}}">
-    <p><b>{{forloop.counter}}.</b></p>
+    <p><b>>></b></p>
     <p class="feedbackerpara "
         style="color:rgb(255,255,255); background-color: rgba(0,0,0,1); border:2px solid rgb(255, 255, 255); border-radius:5px;">
         User: <span
@@ -79,7 +81,7 @@
  -->
 
 <script>
-    function goodShower() {
+
         let rate = document.getElementsByClassName("overallexp");
 
         
@@ -95,41 +97,41 @@
         }
 
 
-    };
+    
 
-    function badShower() {
-        let rate = document.getElementsByClassName("overallexp");
-
-         
-        for (let i = 0; i < rate.length; i++) {
-            let comp = rate[i].innerHTML;
-            if (comp > 3) {
-                document.getElementById("fullfeed" + (i + 1) + "").style.display = "none";
-            }
-
-
-
-        }
-
-
-    };
-    function resetShower() {
-        let rate = document.getElementsByClassName("overallexp");
-
-        
-
-        for (let i = 0; i < rate.length; i++) {
-            let comp = rate[i].innerHTML;
-             
-                document.getElementById("fullfeed" + (i + 1) + "").style.display = "block";
-             
+  //  function badShower() {
+    //    let rate = document.getElementsByClassName("overallexp");
+//
+  //       
+    //    for (let i = 0; i < rate.length; i++) {
+        //    let comp = rate[i].innerHTML;
+      //      if (comp > 3) {
+          //      document.getElementById("fullfeed" + (i + 1) + "").style.display = "none";
+            //}
 
 
 
-        }
+        //}
 
 
-    };
+    //};
+    //function resetShower() {
+     //   let rate = document.getElementsByClassName("overallexp");
+//
+  //      
+//
+        //for (let i = 0; i < rate.length; i++) {
+  //          let comp = rate[i].innerHTML;
+    //         
+      //          document.getElementById("fullfeed" + (i + 1) + "").style.display = "block";
+          //   
+
+
+
+        //}
+
+
+   // };
 
 
 

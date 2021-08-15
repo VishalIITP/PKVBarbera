@@ -3,14 +3,11 @@
 
 {% block title%}Services-Barbera{% endblock title%}
 
-
-
-
 {% block activateServicesPage %}current{% endblock activateServicesPage %}
 
 
 {%block csslink %}
-<link rel="stylesheet" href="../../static/css/servicesstyle.css">
+<link rel="stylesheet" href="{% static 'css/servicesstyle.css' %}">
 {% endblock csslink %}
 
 
@@ -37,9 +34,6 @@
 </section>
 <section id="services">
     <div id="ser">
-
-
-
         <!--Male-->
         <div class="box" id="male_salon">
             <br>
@@ -59,27 +53,40 @@
                     <div class="book_text">
                         <p>{{x.serviceName}}</p>
 
-                        <p id="m_1_price">{{x.servicePrice}}</p>
-                        <button class="book_btn cart_btn">Add to Cart</button>
-                        <button class="book_btn book_now_btn">Book Now</button>
+                        <p id="price{{forloop.counter}}mainstrike"><strike
+                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
+                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                        </p>
+                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
+                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
+                            to Cart</button>
+                        <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
                     </div>
                     <div class="variety">
                         <div class="variety_btn">
-                            <button class="var_btn" onclick="m_1_disp1()">Var 1 @ Price</button>
-                            <button class="var_btn" onclick="m_1_disp2()">var 2 @ Price</button>
+                            <button class="var_btn" id="priceA{{forloop.counter}}"
+                                onmouseover="priceAFunc(this)">Platinum </button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">Gold
+                            </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}"
+                                onmouseover="priceCFunc(this)">Silver</button>
                         </div>
                         <div class="services_desc">
-                            <p id="m_1_desc">{{x.serviceDesc}}</p>
+                            <div id="priceA{{forloop.counter}}desc" style="display: none">
+                                Rs.{{x.serviceSubCategory1Price}}
+                            <p> {{x.serviceSubCategory1Desc}}</p>
+                            </div>
+                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                                Rs.{{x.serviceSubCategory1Price}}
+                            <p> {{x.serviceSubCategory1Desc}}</p>
+                            </p>
+                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                                Rs.{{x.serviceSubCategory1Price}}
+                            <p> {{x.serviceSubCategory1Desc}}</p>
+                            </p>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
 
                 {% endif %}
 
@@ -88,54 +95,66 @@
             </div>
 
 
-            <!--Female-->
-            <div class="box" id="female_salon">
-                <br>
-                <br>
-
-                <h class="head-pri">Women's salon</h>
 
 
-                {% for x in services %}
-
-                {% if x.serviceCategory == "women" %}
 
 
-                <div class="icon">
-                    <div class="icon_text">
-                        <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
 
-                        <div class="book_text">
-                            <p>{{x.serviceName}}</p>
+        </div>
 
-                            <p id="m_1_price">{{x.servicePrice}}</p>
-                            <button class="book_btn cart_btn">Add to Cart</button>
-                            <button class="book_btn book_now_btn">Book Now</button>
+        <!--Female-->
+        <div class="box" id="female_salon">
+            <br>
+            <br>
+
+            <h class="head-pri">Women's salon</h>
+
+
+            {% for x in services %}
+
+            {% if x.serviceCategory == "women" %}
+
+
+            <div class="icon">
+                <div class="icon_text">
+                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                    <div class="book_text">
+                        <p>{{x.serviceName}}</p>
+
+                        <p id="price{{forloop.counter}}mainstrike"><strike
+                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
+                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                        </p>
+                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
+                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
+                            to Cart</button>
+                        <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
+                    </div>
+                    <div class="variety">
+                        <div class="variety_btn">
+                            <button class="var_btn" id="priceA{{forloop.counter}}"
+                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}"
+                                onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}"
+                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3Price}}</button>
                         </div>
-                        <div class="variety">
-                            <div class="variety_btn">
-                                <button class="var_btn" onclick="m_1_disp1()">Var 1 @ Price</button>
-                                <button class="var_btn" onclick="m_1_disp2()">var 2 @ Price</button>
-                            </div>
-                            <div class="services_desc">
-                                <p id="m_1_desc">{{x.serviceDesc}}}}</p>
-                            </div>
+                        <div class="services_desc">
+                            <p id="priceA{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory1Desc}}
+                            </p>
+                            <p id="priceB{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory2Desc}}
+                            </p>
+                            <p id="priceC{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory3Desc}}
+                            </p>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-                    {% endif %}
-
-
-                    {% endfor %}
                 </div>
 
+                {% endif %}
+
+
+                {% endfor %}
+            </div>
 
 
 
@@ -143,430 +162,256 @@
 
 
 
+        </div>
 
 
 
+        <!--Wedding-->
+        <div class="box" id="wed_salon">
+            <br>
+            <br>
 
-                <!--Wedding Packages-->
-                <div class="box" id="wed_salon">
-                    <br>
-                    <br>
-
-                    <h class="head-pri">Wedding Packages</h>
-
-
-                    {% for x in services %}
-
-                    {% if x.serviceCategory == "wedding" %}
+            <h class="head-pri">Wedding Packages</h>
 
 
-                    <div class="icon">
-                        <div class="icon_text">
-                            <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
-                            <div class="book_text">
-                                <p>{{x.serviceName}}</p>
+            {% for x in services %}
 
-                                <p id="m_1_price">{{x.servicePrice}}</p>
-                                <button class="book_btn cart_btn">Add to Cart</button>
-                                <button class="book_btn book_now_btn">Book Now</button>
-                            </div>
-                            <div class="variety">
-                                <div class="variety_btn">
-                                    <button class="var_btn" onclick="m_1_disp1()">Var 1 @ Price</button>
-                                    <button class="var_btn" onclick="m_1_disp2()">var 2 @ Price</button>
-                                </div>
-                                <div class="services_desc">
-                                    <p id="m_1_desc">{{x.serviceDesc}} </p>
-                                </div>
-                            </div>
-                        </div>
+            {% if x.serviceCategory == "wedding" %}
 
 
+            <div class="icon">
+                <div class="icon_text">
+                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                    <div class="book_text">
+                        <p>{{x.serviceName}}</p>
 
-
-
-
-
-
-                        {% endif %}
-
-
-                        {% endfor %}
+                        <p id="price{{forloop.counter}}mainstrike"><strike
+                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
+                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                        </p>
+                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
+                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
+                            to Cart</button>
+                        <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
                     </div>
-
-
-
-
-
-                    <!--Kid's Section-->
-                    <div class="box" id="kids_salon">
-                        <br>
-                        <br>
-
-                        <h class="head-pri">Kids Section</h>
-
-
-                        {% for x in services %}
-
-                        {% if x.serviceCategory == "kids" %}
-
-
-                        <div class="icon">
-                            <div class="icon_text">
-                                <button class="icon_btn" id="kids_{{forloop.counter}}"></button>
-                                <div class="book_text">
-                                    <p>{{x.serviceName}}</p>
-
-                                    <p id="m_1_price">{{x.servicePrice}}</p>
-                                    <button class="book_btn cart_btn">Add to Cart</button>
-                                    <button class="book_btn book_now_btn">Book Now</button>
-                                </div>
-                                <div class="variety">
-                                    <div class="variety_btn">
-                                        <button class="var_btn" onclick="m_1_disp1()">Var 1 @ Price</button>
-                                        <button class="var_btn" onclick="m_1_disp2()">var 2 @ Price</button>
-                                    </div>
-                                    <div class="services_desc">
-                                        <p id="m_1_desc">{{x.serviceDesc}} </p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-                            {% endif %}
-
-
-                            {% endfor %}
+                    <div class="variety">
+                        <div class="variety_btn">
+                            <button class="var_btn" id="priceA{{forloop.counter}}"
+                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}"
+                                onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}"
+                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3Price}}</button>
                         </div>
+                        <div class="services_desc">
+                            <p id="priceA{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory1Desc}}
+                            </p>
+                            <p id="priceB{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory2Desc}}
+                            </p>
+                            <p id="priceC{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory3Desc}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
 
 
+                {% endfor %}
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+        <!--Kids-->
+        <div class="box" id="kids_salon">
+            <br>
+            <br>
+
+            <h class="head-pri">Kid's Section</h>
+
+
+            {% for x in services %}
+
+            {% if x.serviceCategory == "kids" %}
+
+
+            <div class="icon">
+                <div class="icon_text">
+                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                    <div class="book_text">
+                        <p>{{x.serviceName}}</p>
+
+                        <p id="price{{forloop.counter}}mainstrike"><strike
+                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
+                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                        </p>
+                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
+                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
+                            to Cart</button>
+                        <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
+                    </div>
+                    <div class="variety">
+                        <div class="variety_btn">
+                            <button class="var_btn" id="priceA{{forloop.counter}}"
+                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}"
+                                onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}"
+                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory2Price}}</button>
+                        </div>
+                        <div class="services_desc">
+                            <p id="priceA{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory1Desc}}
+                            </p>
+                            <p id="priceB{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory2Desc}}
+                            </p>
+                            <p id="priceC{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory3Desc}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+
+
+                {% endfor %}
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
 </section>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--navigation bar script-->
 <script>
-    //To change Burger icon to cross
-    function myFunction(x) {
-        x.classList.toggle("change");
-    }
-    //Navigation Bar for mobiles and table
-    burger = document.querySelector('.burger')
-    navbar = document.querySelector('.navbar')
-    navList = document.querySelector('.nav-list')
+    //dps is different price shower varaiable
 
-    burger.addEventListener('click', () => {
-        navList.classList.toggle('v-class-resp');
-        navbar.classList.toggle('h-nav-resp');
-    })
 
-</script>
-<!--back to top-->
-<script>
-    //Get the button
-    let mybutton = document.getElementById("btn-back-to-top");
+    function priceAFunc(dps) {
+        var descId = dps.id + "desc";
+        var descId2 = descId.slice(0, 5) + 'B' + descId.slice(6, 7) + 'desc';
+        var descId3 = descId.slice(0, 5) + 'C' + descId.slice(6, 7) + 'desc';
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () {
-        scrollFunction();
-    };
+        document.getElementById(descId2).style.display = "none";
+        document.getElementById(descId3).style.display = "none";
 
-    function scrollFunction() {
-        if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-        ) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    }
-    // When the user clicks on the button, scroll to the top of the document
-    mybutton.addEventListener("click", backToTop);
 
-    function backToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
-<!--To change description of service-->
-<!--Male Section-->
-<script>
-    function m_1_disp1() {
-        var x = document.getElementById("m_1_price");
-        var y = document.getElementById("m_1_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
+        document.getElementById(descId).style.display = "block";
+
+
+
+        var mainpriceId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "main";
+        var mainpricestrikeId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
+
+        var pr = document.getElementById(dps.id).innerText;
+
+        document.getElementById(mainpriceId).innerText = pr;
+        document.getElementById(mainpricestrikeId).innerText = pr;
+
+
 
     }
-    function m_1_disp2() {
-        var x = document.getElementById("m_1_price");
-        var y = document.getElementById("m_1_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
+
+    function priceBFunc(dps) {
+        var descId = dps.id + "desc";
+        var descId2 = descId.slice(0, 5) + 'A' + descId.slice(6, 7) + 'desc';
+        var descId3 = descId.slice(0, 5) + 'C' + descId.slice(6, 7) + 'desc';
+
+        document.getElementById(descId2).style.display = "none";
+        document.getElementById(descId3).style.display = "none";
+
+
+        document.getElementById(descId).style.display = "block";
+
+        var mainpriceId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "main";
+        var mainpricestrikeId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
+
+        var pr = document.getElementById(dps.id).innerText;
+
+        document.getElementById(mainpriceId).innerText = pr;
+        document.getElementById(mainpricestrikeId).innerText = pr;
+
+
+
+
     }
 
-    function m_2_disp1() {
-        var x = document.getElementById("m_2_price");
-        var y = document.getElementById("m_2_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function m_2_disp2() {
-        var x = document.getElementById("m_2_price");
-        var y = document.getElementById("m_2_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
+
+    function priceCFunc(dps) {
+        var descId = dps.id + "desc";
+        var descId2 = descId.slice(0, 5) + 'A' + descId.slice(6, 7) + 'desc';
+        var descId3 = descId.slice(0, 5) + 'B' + descId.slice(6, 7) + 'desc';
+
+
+        document.getElementById(descId2).style.display = "none";
+        document.getElementById(descId3).style.display = "none";
+
+
+        document.getElementById(descId).style.display = "block";
+
+
+        var mainpriceId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "main";
+        var mainpricestrikeId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
+
+        var pr = document.getElementById(dps.id).innerText;
+
+        document.getElementById(mainpriceId).innerText = pr;
+        document.getElementById(mainpricestrikeId).innerText = pr;
+
+
+
+
+
+
+
+
+
     }
 
-    function m_3_disp1() {
-        var x = document.getElementById("m_3_price");
-        var y = document.getElementById("m_3_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function m_3_disp2() {
-        var x = document.getElementById("m_3_price");
-        var y = document.getElementById("m_3_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
 
-    function m_4_disp1() {
-        var x = document.getElementById("m_4_price");
-        var y = document.getElementById("m_4_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function m_4_disp2() {
-        var x = document.getElementById("m_4_price");
-        var y = document.getElementById("m_4_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
 
-    function m_5_disp1() {
-        var x = document.getElementById("m_5_price");
-        var y = document.getElementById("m_5_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function m_5_disp2() {
-        var x = document.getElementById("m_5_price");
-        var y = document.getElementById("m_5_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
 
-    function m_6_disp1() {
-        var x = document.getElementById("m_6_price");
-        var y = document.getElementById("m_6_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function m_6_disp2() {
-        var x = document.getElementById("m_6_price");
-        var y = document.getElementById("m_6_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
+
+
 
 </script>
 
-<!--Female Section-->
-<script>
-    function fm_1_disp1() {
-        var x = document.getElementById("fm_1_price");
-        var y = document.getElementById("fm_1_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_1_disp2() {
-        var x = document.getElementById("fm_1_price");
-        var y = document.getElementById("fm_1_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function fm_2_disp1() {
-        var x = document.getElementById("fm_2_price");
-        var y = document.getElementById("fm_2_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_2_disp2() {
-        var x = document.getElementById("fm_2_price");
-        var y = document.getElementById("fm_2_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function fm_3_disp1() {
-        var x = document.getElementById("fm_3_price");
-        var y = document.getElementById("fm_3_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_3_disp2() {
-        var x = document.getElementById("fm_3_price");
-        var y = document.getElementById("fm_3_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function fm_4_disp1() {
-        var x = document.getElementById("fm_4_price");
-        var y = document.getElementById("fm_4_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_4_disp2() {
-        var x = document.getElementById("fm_4_price");
-        var y = document.getElementById("fm_4_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function fm_5_disp1() {
-        var x = document.getElementById("fm_5_price");
-        var y = document.getElementById("fm_5_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_5_disp2() {
-        var x = document.getElementById("fm_5_price");
-        var y = document.getElementById("fm_5_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function fm_6_disp1() {
-        var x = document.getElementById("fm_6_price");
-        var y = document.getElementById("fm_6_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_6_disp2() {
-        var x = document.getElementById("fm_6_price");
-        var y = document.getElementById("fm_6_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function fm_7_disp1() {
-        var x = document.getElementById("fm_7_price");
-        var y = document.getElementById("fm_7_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_7_disp2() {
-        var x = document.getElementById("fm_7_price");
-        var y = document.getElementById("fm_7_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function fm_8_disp1() {
-        var x = document.getElementById("fm_8_price");
-        var y = document.getElementById("fm_8_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function fm_8_disp2() {
-        var x = document.getElementById("fm_8_price");
-        var y = document.getElementById("fm_8_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-</script>
-<!--Wedding Section-->
-<script>
-    function wed_1_disp1() {
-        var x = document.getElementById("wed_1_price");
-        var y = document.getElementById("wed_1_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function wed_1_disp2() {
-        var x = document.getElementById("wed_1_price");
-        var y = document.getElementById("wed_1_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function wed_2_disp1() {
-        var x = document.getElementById("wed_2_price");
-        var y = document.getElementById("wed_2_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function wed_2_disp2() {
-        var x = document.getElementById("wed_2_price");
-        var y = document.getElementById("wed_2_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function wed_3_disp1() {
-        var x = document.getElementById("wed_3_price");
-        var y = document.getElementById("wed_3_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function wed_3_disp2() {
-        var x = document.getElementById("wed_3_price");
-        var y = document.getElementById("wed_3_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-
-    function wed_4_disp1() {
-        var x = document.getElementById("wed_4_price");
-        var y = document.getElementById("wed_4_desc");
-        x.innerHTML = "Price1";
-        y.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
-    function wed_4_disp2() {
-        var x = document.getElementById("wed_4_price");
-        var y = document.getElementById("wed_4_desc");
-        x.innerHTML = "Price2";
-        y.innerHTML = "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure reprehenderit laboriosam sint laborum saepe nostrum ratione vero ullam aut veniam minus dignissimos accusamus incidunt soluta, quis velit asperiores culpa!";
-    }
 
 
-</script>
+
+
+
+
+
+
+
+
 
 {% endblock body%}
 
@@ -594,17 +439,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 {%endblock rateUs%}
