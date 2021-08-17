@@ -73,25 +73,234 @@
                         </div>
                         <div class="services_desc">
                             <div id="priceA{{forloop.counter}}desc" style="display: none">
-                                Rs.{{x.serviceSubCategory1Price}}
-                            <p> {{x.serviceSubCategory1Desc}}</p>
+                                <p id="priceA{{forloop.counter}}descprice">s{{x.serviceSubCategory1Price}}</p>
+                                <p> {{x.serviceSubCategory1Desc}}</p>
                             </div>
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
-                                Rs.{{x.serviceSubCategory1Price}}
-                            <p> {{x.serviceSubCategory1Desc}}</p>
-                            </p>
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
-                                Rs.{{x.serviceSubCategory1Price}}
-                            <p> {{x.serviceSubCategory1Desc}}</p>
-                            </p>
+                            <div id="priceA{{forloop.counter}}desc" style="display: none;">
+                                <p id="priceA{{forloop.counter}}descprice">{{x.serviceSubCategory1Price}}</p>
+                                <p> {{x.serviceSubCategory1Desc}}</p>
+                            </div>
+                            <div id="priceA{{forloop.counter}}desc" style="display: none;">
+                                <p id="priceA{{forloop.counter}}descprice">{{x.serviceSubCategory1Price}}</p>
+                                <p> {{x.serviceSubCategory1Desc}}</p>
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    {% endif %}
+
+
+                    {% endfor %}
                 </div>
 
-                {% endif %}
 
 
-                {% endfor %}
+
+
+
+
+            </div>
+
+            <!--Female-->
+            <div class="box" id="female_salon">
+                <br>
+                <br>
+
+                <h class="head-pri">Women's salon</h>
+
+
+                {% for x in services %}
+
+                {% if x.serviceCategory == "women" %}
+
+
+                <div class="icon">
+                    <div class="icon_text">
+                        <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                        <div class="book_text">
+                            <p>{{x.serviceName}}</p>
+
+                            <p id="price{{forloop.counter}}mainstrike"><strike
+                                    id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
+                                <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                            </p>
+                            <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
+                            <button class="book_btn cart_btn" id="servmen{{forloop.counter}}"
+                                onclick="cartFunc(this)">Add
+                                to Cart</button>
+                            <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
+                        </div>
+                        <div class="variety">
+                            <div class="variety_btn">
+                                <button class="var_btn" id="priceA{{forloop.counter}}"
+                                    onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
+                                <button class="var_btn" id="priceB{{forloop.counter}}"
+                                    onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
+                                <button class="var_btn" id="priceC{{forloop.counter}}"
+                                    onmouseover="priceCFunc(this)">{{x.serviceSubCategory3Price}}</button>
+                            </div>
+                            <div class="services_desc">
+                                <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory1Desc}}
+                                </p>
+                                <p id="priceB{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory2Desc}}
+                                </p>
+                                <p id="priceC{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory3Desc}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endif %}
+
+
+                    {% endfor %}
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+            <!--Wedding-->
+            <div class="box" id="wed_salon">
+                <br>
+                <br>
+
+                <h class="head-pri">Wedding Packages</h>
+
+
+                {% for x in services %}
+
+                {% if x.serviceCategory == "wedding" %}
+
+
+                <div class="icon">
+                    <div class="icon_text">
+                        <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                        <div class="book_text">
+                            <p>{{x.serviceName}}</p>
+
+                            <p id="price{{forloop.counter}}mainstrike"><strike
+                                    id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
+                                <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                            </p>
+                            <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
+                            <button class="book_btn cart_btn" id="servmen{{forloop.counter}}"
+                                onclick="cartFunc(this)">Add
+                                to Cart</button>
+                            <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
+                        </div>
+                        <div class="variety">
+                            <div class="variety_btn">
+                                <button class="var_btn" id="priceA{{forloop.counter}}"
+                                    onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
+                                <button class="var_btn" id="priceB{{forloop.counter}}"
+                                    onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
+                                <button class="var_btn" id="priceC{{forloop.counter}}"
+                                    onmouseover="priceCFunc(this)">{{x.serviceSubCategory3Price}}</button>
+                            </div>
+                            <div class="services_desc">
+                                <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory1Desc}}
+                                </p>
+                                <p id="priceB{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory2Desc}}
+                                </p>
+                                <p id="priceC{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory3Desc}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endif %}
+
+
+                    {% endfor %}
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+            <!--Kids-->
+            <div class="box" id="kids_salon">
+                <br>
+                <br>
+
+                <h class="head-pri">Kid's Section</h>
+
+
+                {% for x in services %}
+
+                {% if x.serviceCategory == "kids" %}
+
+
+                <div class="icon">
+                    <div class="icon_text">
+                        <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                        <div class="book_text">
+                            <p>{{x.serviceName}}</p>
+
+                            <p id="price{{forloop.counter}}mainstrike"><strike
+                                    id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
+                                <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                            </p>
+                            <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
+                            <button class="book_btn cart_btn" id="servmen{{forloop.counter}}"
+                                onclick="cartFunc(this)">Add
+                                to Cart</button>
+                            <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
+                        </div>
+                        <div class="variety">
+                            <div class="variety_btn">
+                                <button class="var_btn" id="priceA{{forloop.counter}}"
+                                    onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
+                                <button class="var_btn" id="priceB{{forloop.counter}}"
+                                    onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
+                                <button class="var_btn" id="priceC{{forloop.counter}}"
+                                    onmouseover="priceCFunc(this)">{{x.serviceSubCategory2Price}}</button>
+                            </div>
+                            <div class="services_desc">
+                                <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory1Desc}}
+                                </p>
+                                <p id="priceB{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory2Desc}}
+                                </p>
+                                <p id="priceC{{forloop.counter}}desc" style="display: none;">
+                                    {{x.serviceSubCategory3Desc}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endif %}
+
+
+                    {% endfor %}
+                </div>
+
+
+
+
+
+
+
             </div>
 
 
@@ -100,61 +309,9 @@
 
 
 
-        </div>
-
-        <!--Female-->
-        <div class="box" id="female_salon">
-            <br>
-            <br>
-
-            <h class="head-pri">Women's salon</h>
 
 
-            {% for x in services %}
 
-            {% if x.serviceCategory == "women" %}
-
-
-            <div class="icon">
-                <div class="icon_text">
-                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
-                    <div class="book_text">
-                        <p>{{x.serviceName}}</p>
-
-                        <p id="price{{forloop.counter}}mainstrike"><strike
-                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
-                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
-                        </p>
-                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
-                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
-                            to Cart</button>
-                        <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
-                    </div>
-                    <div class="variety">
-                        <div class="variety_btn">
-                            <button class="var_btn" id="priceA{{forloop.counter}}"
-                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
-                            <button class="var_btn" id="priceB{{forloop.counter}}"
-                                onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
-                            <button class="var_btn" id="priceC{{forloop.counter}}"
-                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3Price}}</button>
-                        </div>
-                        <div class="services_desc">
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory1Desc}}
-                            </p>
-                            <p id="priceB{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory2Desc}}
-                            </p>
-                            <p id="priceC{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory3Desc}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {% endif %}
-
-
-                {% endfor %}
-            </div>
 
 
 
@@ -163,151 +320,6 @@
 
 
         </div>
-
-
-
-        <!--Wedding-->
-        <div class="box" id="wed_salon">
-            <br>
-            <br>
-
-            <h class="head-pri">Wedding Packages</h>
-
-
-            {% for x in services %}
-
-            {% if x.serviceCategory == "wedding" %}
-
-
-            <div class="icon">
-                <div class="icon_text">
-                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
-                    <div class="book_text">
-                        <p>{{x.serviceName}}</p>
-
-                        <p id="price{{forloop.counter}}mainstrike"><strike
-                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
-                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
-                        </p>
-                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
-                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
-                            to Cart</button>
-                        <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
-                    </div>
-                    <div class="variety">
-                        <div class="variety_btn">
-                            <button class="var_btn" id="priceA{{forloop.counter}}"
-                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
-                            <button class="var_btn" id="priceB{{forloop.counter}}"
-                                onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
-                            <button class="var_btn" id="priceC{{forloop.counter}}"
-                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3Price}}</button>
-                        </div>
-                        <div class="services_desc">
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory1Desc}}
-                            </p>
-                            <p id="priceB{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory2Desc}}
-                            </p>
-                            <p id="priceC{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory3Desc}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {% endif %}
-
-
-                {% endfor %}
-            </div>
-
-
-
-
-
-
-
-        </div>
-
-
-        <!--Kids-->
-        <div class="box" id="kids_salon">
-            <br>
-            <br>
-
-            <h class="head-pri">Kid's Section</h>
-
-
-            {% for x in services %}
-
-            {% if x.serviceCategory == "kids" %}
-
-
-            <div class="icon">
-                <div class="icon_text">
-                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
-                    <div class="book_text">
-                        <p>{{x.serviceName}}</p>
-
-                        <p id="price{{forloop.counter}}mainstrike"><strike
-                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
-                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
-                        </p>
-                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
-                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
-                            to Cart</button>
-                        <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
-                    </div>
-                    <div class="variety">
-                        <div class="variety_btn">
-                            <button class="var_btn" id="priceA{{forloop.counter}}"
-                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1Price}} </button>
-                            <button class="var_btn" id="priceB{{forloop.counter}}"
-                                onmouseover="priceBFunc(this)">{{x.serviceSubCategory2Price}} </button>
-                            <button class="var_btn" id="priceC{{forloop.counter}}"
-                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory2Price}}</button>
-                        </div>
-                        <div class="services_desc">
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory1Desc}}
-                            </p>
-                            <p id="priceB{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory2Desc}}
-                            </p>
-                            <p id="priceC{{forloop.counter}}desc" style="display: none;">{{x.serviceSubCategory3Desc}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {% endif %}
-
-
-                {% endfor %}
-            </div>
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
 </section>
 <script>
     //dps is different price shower varaiable
