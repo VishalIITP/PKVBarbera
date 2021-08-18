@@ -12,19 +12,26 @@
   background: #212529;
 }
 
-
-.module caption
-{
+.module caption {
   background: #212529;
 }
 
- 
- 
-
-
-
-
+a:link,
+a:visited {
+  color: black;
+}
+div.breadcrumbs {
+  background: #4b4a4a;
+  color: black;
+}
 
 body {
   font-family: "Livvic", sans-serif;
+   
+}
+
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #4b4a4a;
+     
 }
