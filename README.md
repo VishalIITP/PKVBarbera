@@ -8,3 +8,11 @@ Steps to run the app:
 2. To have the superuser access use the command <python3 manage.py createsuperuser>.
 3. To the run the server use the command <python3 manage.py runserver>.
   
+  
+  
+  
+  Developers:
+  Padmaja
+  Kartikay
+  Vishal
+  
