@@ -1,12 +1,16 @@
-{% extends "base.html" %} {% load static %} {% block title%}Rate-Us{% endblock
-title%} {% block activatebookings %}active{% endblock activatebookings %}
+{% extends "base.html" %}
+{% load static %}
+{% block title%}Rate-Us{% endblock title%}
+{% block activatebookings %}active{% endblock activatebookings %}
 {%block csslink%}
 <link rel="stylesheet" href="{% static 'css/rate.css' %}" />
 
-{% endblock csslink%} {%block scriptlink%}{% endblock scriptlink%} {% block body
-%}
+{% endblock csslink%}
+{%block scriptlink%}{% endblock scriptlink%}
 
-<div class="topspacer"><br /><br /><br /><br /></div>
+{% block body %}
+
+<div class="topspacer"><br /><br /><br /></div>
 
 <h1 style="text-align: center; color: black">Provide Review and Suggestion</h1>
 <div class="feedback my-4">
@@ -15,12 +19,7 @@ title%} {% block activatebookings %}active{% endblock activatebookings %}
 
     <div class="costumerreview my-1">
       <label for="floatingInput">Username</label>
-      <input
-        type="text"
-        class="form-control"
-        id="costumerreview"
-        name="review-username"
-      />
+      <input type="text" class="form-control" id="costumerreview" name="review-username" />
     </div>
     <p>
       Dear <span id="costumerreviewgreet">Customer</span><br /><br />
@@ -107,29 +106,15 @@ title%} {% block activatebookings %}active{% endblock activatebookings %}
 
     <div class="clear"></div>
     <hr class="survey-hr" />
-    <label for="m_3189847521540640526commentText"
-      >4. Any Other suggestions:</label
-    ><br /><br />
-    <textarea
-      cols="75"
-      name="review-feedback"
-      rows="5"
-      style="width: 100%"
-    ></textarea
-    ><br />
+    <label for="m_3189847521540640526commentText">4. Any Other suggestions:</label><br /><br />
+    <textarea cols="75" name="review-feedback" rows="5" style="width: 100%"></textarea><br />
     <br />
     <div class="clear"></div>
-    <input
-      style="background: #43a7d5; color: #fff; padding: 12px; border: 0"
-      type="submit"
-      value="&nbsp Submit your review&nbsp"
-    />
+    <input style="background: #43a7d5; color: #fff; padding: 12px; border: 0" type="submit"
+      value="&nbsp Submit your review&nbsp" />
   </form>
   <a href="/reviews">
-    <button
-      class="my-2"
-      style="background: #43a7d5; color: #fff; padding: 12px; border: 0"
-    >
+    <button class="my-2" style="background: #43a7d5; color: #fff; padding: 12px; border: 0">
       &nbsp&nbsp&nbsp&nbsp&nbspShow
       Reviews&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     </button>

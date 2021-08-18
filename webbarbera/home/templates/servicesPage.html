@@ -1,21 +1,11 @@
 {% extends "base.html" %}
 {% load static%}
-
-{% block title%}Services-Barbera{% endblock title%}
-
+{% block title%}Services-Barbera {% endblock title%}
 {% block activateServicesPage %}current{% endblock activateServicesPage %}
-
-
 {%block csslink %}
-<link rel="stylesheet" href="{% static 'css/servicesstyle.css' %}">
+<link rel="stylesheet" href="{% static 'css/servicesstyle.css' %}" />
 {% endblock csslink %}
-
-
-
 {% block body%}
-
-
-
 
 <!-- Animated Heading -->
 <div class="svg-wrapper">
@@ -34,66 +24,67 @@
 </section>
 <section id="services">
     <div id="ser">
-
         <!--Male-->
         <div class="box" id="male_salon">
-            <br>
-            <br>
+            <br />
+            <br />
 
             <h class="head-pri">Men's salon</h>
 
-
-            {% for x in services %}
-
-            {% if x.serviceCategory == "men" %}
-
+            {% for x in services %} {% if x.serviceCategory == "men" %}
 
             <div class="icon">
                 <div class="icon_text">
-                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}" />
                     <div class="book_text">
                         <p>{{x.serviceName}}</p>
 
-                        <p id="price{{forloop.counter}}mainstrike"><strike
-                                id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
-                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                        <p id="price{{forloop.counter}}mainstrike">
+                            <strike id="price{{forloop.counter}}mainstrikechanger"></strike>
+                            <font style="color: red"> {{x.serviceCategoryDiscount}}%off</font>
                         </p>
-                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
-                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">Add
-                            to Cart</button>
+                        <p id="price{{forloop.counter}}main">
+                            {{x.serviceSubCategory1Price}}
+                        </p>
+                        <button class="book_btn cart_btn" id="servmen{{forloop.counter}}" onclick="cartFunc(this)">
+                            Add to Cart
+                        </button>
                         <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
                     </div>
                     <div class="variety">
                         <div class="variety_btn">
-                            <button class="var_btn" id="priceA{{forloop.counter}}"
-                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1}} </button>
-                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">{{x.serviceSubCategory2}}
+                            <button class="var_btn" id="priceA{{forloop.counter}}" onmouseover="priceAFunc(this)">
+                                {{x.serviceSubCategory1}}
                             </button>
-                            <button class="var_btn" id="priceC{{forloop.counter}}"
-                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3}}</button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">
+                                {{x.serviceSubCategory2}}
+                            </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}" onmouseover="priceCFunc(this)">
+                                {{x.serviceSubCategory3}}
+                            </button>
                         </div>
                         <div class="services_desc">
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceA{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceA{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory1Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory1Desc}}
                             </p>
-                            <p id="priceB{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceB{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceB{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory2Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory2Desc}}
                             </p>
-                            <p id="priceC{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceC{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceC{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory3Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory3Desc}}
                             </p>
@@ -101,80 +92,72 @@
                     </div>
                 </div>
 
-                {% endif %}
-
-
-                {% endfor %}
+                {% endif %} {% endfor %}
             </div>
-
-
-
-
-
-
-
         </div>
-
 
         <!--Female-->
         <div class="box" id="female_salon">
-            <br>
-            <br>
+            <br />
+            <br />
 
             <h class="head-pri">Women's salon</h>
 
-
-            {% for x in services %}
-
-            {% if x.serviceCategory == "women" %}
-
+            {% for x in services %} {% if x.serviceCategory == "women" %}
 
             <div class="icon">
                 <div class="icon_text">
-                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}" />
                     <div class="book_text">
                         <p>{{x.serviceName}}</p>
 
-                        <p id="price{{forloop.counter}}mainstrike"><strike
+                        <p id="price{{forloop.counter}}mainstrike">
+                            <strike
                                 id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
-                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                            <font style="color: red"> {{x.serviceCategoryDiscount}}%off</font>
                         </p>
-                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
-                        <button class="book_btn cart_btn" id="servwomen{{forloop.counter}}" onclick="cartFunc(this)">Add
-                            to Cart</button>
+                        <p id="price{{forloop.counter}}main">
+                            {{x.serviceSubCategory1Price}}
+                        </p>
+                        <button class="book_btn cart_btn" id="servwomen{{forloop.counter}}" onclick="cartFunc(this)">
+                            Add to Cart
+                        </button>
                         <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
                     </div>
                     <div class="variety">
                         <div class="variety_btn">
-                            <button class="var_btn" id="priceA{{forloop.counter}}"
-                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1}} </button>
-                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">{{x.serviceSubCategory2}}
+                            <button class="var_btn" id="priceA{{forloop.counter}}" onmouseover="priceAFunc(this)">
+                                {{x.serviceSubCategory1}}
                             </button>
-                            <button class="var_btn" id="priceC{{forloop.counter}}"
-                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3}}</button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">
+                                {{x.serviceSubCategory2}}
+                            </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}" onmouseover="priceCFunc(this)">
+                                {{x.serviceSubCategory3}}
+                            </button>
                         </div>
                         <div class="services_desc">
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceA{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceA{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory1Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory1Desc}}
                             </p>
-                            <p id="priceB{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceB{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceB{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory2Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory2Desc}}
                             </p>
-                            <p id="priceC{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceC{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceC{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory3Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory3Desc}}
                             </p>
@@ -182,81 +165,72 @@
                     </div>
                 </div>
 
-                {% endif %}
-
-
-                {% endfor %}
+                {% endif %} {% endfor %}
             </div>
-
-
-
-
-
-
-
         </div>
-
-
 
         <!--Wedding-->
         <div class="box" id="wed_salon">
-            <br>
-            <br>
+            <br />
+            <br />
 
             <h class="head-pri">Wedding Packages</h>
 
-
-            {% for x in services %}
-
-            {% if x.serviceCategory == "wedding" %}
-
+            {% for x in services %} {% if x.serviceCategory == "wedding" %}
 
             <div class="icon">
                 <div class="icon_text">
-                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}" />
                     <div class="book_text">
                         <p>{{x.serviceName}}</p>
 
-                        <p id="price{{forloop.counter}}mainstrike"><strike
+                        <p id="price{{forloop.counter}}mainstrike">
+                            <strike
                                 id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
-                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                            <font style="color: red"> {{x.serviceCategoryDiscount}}%off</font>
                         </p>
-                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
-                        <button class="book_btn cart_btn" id="servwedding{{forloop.counter}}" onclick="cartFunc(this)">Add
-                            to Cart</button>
+                        <p id="price{{forloop.counter}}main">
+                            {{x.serviceSubCategory1Price}}
+                        </p>
+                        <button class="book_btn cart_btn" id="servwedding{{forloop.counter}}" onclick="cartFunc(this)">
+                            Add to Cart
+                        </button>
                         <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
                     </div>
                     <div class="variety">
                         <div class="variety_btn">
-                            <button class="var_btn" id="priceA{{forloop.counter}}"
-                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1}} </button>
-                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">{{x.serviceSubCategory2}}
+                            <button class="var_btn" id="priceA{{forloop.counter}}" onmouseover="priceAFunc(this)">
+                                {{x.serviceSubCategory1}}
                             </button>
-                            <button class="var_btn" id="priceC{{forloop.counter}}"
-                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3}}</button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">
+                                {{x.serviceSubCategory2}}
+                            </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}" onmouseover="priceCFunc(this)">
+                                {{x.serviceSubCategory3}}
+                            </button>
                         </div>
                         <div class="services_desc">
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceA{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceA{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory1Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory1Desc}}
                             </p>
-                            <p id="priceB{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceB{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceB{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory2Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory2Desc}}
                             </p>
-                            <p id="priceC{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceC{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceC{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory3Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory3Desc}}
                             </p>
@@ -264,80 +238,72 @@
                     </div>
                 </div>
 
-                {% endif %}
-
-
-                {% endfor %}
+                {% endif %} {% endfor %}
             </div>
-
-
-
-
-
-
-
         </div>
-
 
         <!--Kids-->
         <div class="box" id="kids_salon">
-            <br>
-            <br>
+            <br />
+            <br />
 
             <h class="head-pri">Kid's Section</h>
 
-
-            {% for x in services %}
-
-            {% if x.serviceCategory == "kids" %}
-
+            {% for x in services %} {% if x.serviceCategory == "kids" %}
 
             <div class="icon">
                 <div class="icon_text">
-                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}">
+                    <img class="icon_btn serviceImages" src="media/{{x.serviceImage}}" />
                     <div class="book_text">
                         <p>{{x.serviceName}}</p>
 
-                        <p id="price{{forloop.counter}}mainstrike"><strike
+                        <p id="price{{forloop.counter}}mainstrike">
+                            <strike
                                 id="price{{forloop.counter}}mainstrikechanger">{{x.serviceSubCategory1Price}}</strike>
-                            <font style="color: red;"> {{x.serviceCategoryDiscount}}%off</font>
+                            <font style="color: red"> {{x.serviceCategoryDiscount}}%off</font>
                         </p>
-                        <p id="price{{forloop.counter}}main">{{x.serviceSubCategory1Price}}</p>
-                        <button class="book_btn cart_btn" id="servkids{{forloop.counter}}" onclick="cartFunc(this)">Add
-                            to Cart</button>
+                        <p id="price{{forloop.counter}}main">
+                            {{x.serviceSubCategory1Price}}
+                        </p>
+                        <button class="book_btn cart_btn" id="servkids{{forloop.counter}}" onclick="cartFunc(this)">
+                            Add to Cart
+                        </button>
                         <a href="/myCart"><button class="book_btn book_now_btn">Book Now</button></a>
                     </div>
                     <div class="variety">
                         <div class="variety_btn">
-                            <button class="var_btn" id="priceA{{forloop.counter}}"
-                                onmouseover="priceAFunc(this)">{{x.serviceSubCategory1}} </button>
-                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">{{x.serviceSubCategory2}}
+                            <button class="var_btn" id="priceA{{forloop.counter}}" onmouseover="priceAFunc(this)">
+                                {{x.serviceSubCategory1}}
                             </button>
-                            <button class="var_btn" id="priceC{{forloop.counter}}"
-                                onmouseover="priceCFunc(this)">{{x.serviceSubCategory3}}</button>
+                            <button class="var_btn" id="priceB{{forloop.counter}}" onmouseover="priceBFunc(this)">
+                                {{x.serviceSubCategory2}}
+                            </button>
+                            <button class="var_btn" id="priceC{{forloop.counter}}" onmouseover="priceCFunc(this)">
+                                {{x.serviceSubCategory3}}
+                            </button>
                         </div>
                         <div class="services_desc">
-                            <p id="priceA{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceA{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceA{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory1Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory1Desc}}
                             </p>
-                            <p id="priceB{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceB{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceB{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory2Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory2Desc}}
                             </p>
-                            <p id="priceC{{forloop.counter}}desc" style="display: none;">
+                            <p id="priceC{{forloop.counter}}desc" style="display: none">
                                 <font class="categorypriceDeco">Rs.</font>
                                 <font id="priceC{{forloop.counter}}desccategoryprice">{{x.serviceSubCategory3Price}}
                                 </font>
-                                <font class="categorypriceDeco">/-</font><br>
+                                <font class="categorypriceDeco">/-</font><br />
 
                                 {{x.serviceSubCategory3Desc}}
                             </p>
@@ -345,169 +311,92 @@
                     </div>
                 </div>
 
-                {% endif %}
-
-
-                {% endfor %}
+                {% endif %} {% endfor %}
             </div>
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </section>
 <script>
     //dps is different price shower varaiable
 
-
     function priceAFunc(dps) {
         var descId = dps.id + "desc";
-        var descId2 = descId.slice(0, 5) + 'B' + descId.slice(6, 7) + 'desc';
-        var descId3 = descId.slice(0, 5) + 'C' + descId.slice(6, 7) + 'desc';
+        var descId2 = descId.slice(0, 5) + "B" + descId.slice(6, 7) + "desc";
+        var descId3 = descId.slice(0, 5) + "C" + descId.slice(6, 7) + "desc";
 
         document.getElementById(descId2).style.display = "none";
         document.getElementById(descId3).style.display = "none";
 
-
         document.getElementById(descId).style.display = "block";
 
-
-
         var mainpriceId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "main";
-        var mainpricestrikeId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
+        var mainpricestrikeId =
+            dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
 
         var desccategorypriceId = dps.id + "desccategoryprice";
         var pr = document.getElementById(desccategorypriceId).innerText;
-        document.getElementById(mainpriceId).innerText = pr;
+        document.getElementById(mainpriceId).innerText = Number(pr) - Number(pr);
         document.getElementById(mainpricestrikeId).innerText = pr;
-
-
-
     }
 
     function priceBFunc(dps) {
         var descId = dps.id + "desc";
-        var descId2 = descId.slice(0, 5) + 'A' + descId.slice(6, 7) + 'desc';
-        var descId3 = descId.slice(0, 5) + 'C' + descId.slice(6, 7) + 'desc';
+        var descId2 = descId.slice(0, 5) + "A" + descId.slice(6, 7) + "desc";
+        var descId3 = descId.slice(0, 5) + "C" + descId.slice(6, 7) + "desc";
 
         document.getElementById(descId2).style.display = "none";
         document.getElementById(descId3).style.display = "none";
 
-
         document.getElementById(descId).style.display = "block";
 
         var mainpriceId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "main";
-        var mainpricestrikeId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
+        var mainpricestrikeId =
+            dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
 
         var desccategorypriceId = dps.id + "desccategoryprice";
         var pr = document.getElementById(desccategorypriceId).innerText;
-        document.getElementById(mainpriceId).innerText = pr;
+        document.getElementById(mainpriceId).innerText = Number(pr) - Number(pr);
         document.getElementById(mainpricestrikeId).innerText = pr;
-
-
-
-
     }
-
 
     function priceCFunc(dps) {
         var descId = dps.id + "desc";
-        var descId2 = descId.slice(0, 5) + 'A' + descId.slice(6, 7) + 'desc';
-        var descId3 = descId.slice(0, 5) + 'B' + descId.slice(6, 7) + 'desc';
-
+        var descId2 = descId.slice(0, 5) + "A" + descId.slice(6, 7) + "desc";
+        var descId3 = descId.slice(0, 5) + "B" + descId.slice(6, 7) + "desc";
 
         document.getElementById(descId2).style.display = "none";
         document.getElementById(descId3).style.display = "none";
 
-
         document.getElementById(descId).style.display = "block";
 
-
         var mainpriceId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "main";
-        var mainpricestrikeId = dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
+        var mainpricestrikeId =
+            dps.id.slice(0, 5) + dps.id.slice(6, 7) + "mainstrikechanger";
 
         var desccategorypriceId = dps.id + "desccategoryprice";
         var pr = document.getElementById(desccategorypriceId).innerText;
-        document.getElementById(mainpriceId).innerText = pr;
+        document.getElementById(mainpriceId).innerText = Number(pr) - Number(pr);
         document.getElementById(mainpricestrikeId).innerText = pr;
-
-
-
-
-
-
-
-
-
-
     }
 
-
-
-
-
-
-
+    for (let i = 0; i < 5; i++) {
+        document.getElementById("price" + i + "mainstrikechanger").innerText ="jadfsl";
+    }
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-{% endblock body%}
-
-
-
+{% endblock body%} 
 
 {% block rateUs %}
 
-
 <div class="container">
-
     <div class="row">
-
-        <div class="col">
-
-        </div>
-        <div class="col">
-
-        </div>
-        <div class="col">
-
-        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
         <div class="col">
             <a class="goto" id="rate" href="/rate">Rate-Us</a>
         </div>
     </div>
 </div>
-
 
 {%endblock rateUs%}
