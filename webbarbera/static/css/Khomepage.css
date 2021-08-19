@@ -29,6 +29,7 @@ background-color: #a3a3a347;
 }
 
 
+
 /*Padmaja Code for animation*/
 
 #home img{
@@ -84,7 +85,7 @@ color: white;
 #offers{
 display: flex;
 flex-direction: column;
-height: 730px;
+height: 750px;
 background-color: #EFEFEF;
 /* border: 1px solid blue;*/
 }
@@ -100,38 +101,24 @@ display: block;
 margin:auto;
 margin-top: 50px;
 margin-bottom: 20px;
-font-size: 2.3rem;
+font-size: 2.5rem;
 color: #2B2B2B;
-
+font-weight: bolder;
 }
-#offer{
-/*border: 2px solid red;*/
-display: flex;
-margin: 20px;
-justify-content: center;
-align-content: center;
+#offers .active{
+opacity: 100;
 }
 /*animation :Button Offers*/
-/*#offer .upper{
-border: 2px solid cyan;
-height: 450px;
-width: 300px;
-overflow: hidden;
-margin: 25px;
-background-color: none;
-}*/
-#offer .box{
+.offer .box{
 display: flex;
 flex-direction: column;
 width: 300px;
 height: 450px;
 border-radius: 15px;
 background-color: none;
-margin-right: 10px;
-margin-left: 10px;
 /*border: 10px solid green;*/
 }
-#offer .btn_offers{
+.offer .btn_offers{
 display: block;
 text-align: center;
 font-size: 1rem;
@@ -141,7 +128,7 @@ margin: auto;
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 background-color: #bebcbc;
-width: 300px;
+width: 350px;
 height: 100px;
 color: black;
 font-family: 'Montserrat', sans-serif;
@@ -152,20 +139,22 @@ border:none;
 /*border: 2px solid black;*/
 }
 
-#offer .box1{
+.offer .box1{
 /*border: 2px solid black;*/
 display: block;
 margin: auto;
 height: 450px;
-width: 300px;
+width: 350px;
 border-radius: 15px;
 background-color: #DDDDDD;
+-webkit-transition: background-color .5s; /* For Safari 3.0 to 6.0 */
+    transition: background-color .5s;
 }
-#offer .box2{
+.offer .box2{
 display: block;
 margin: auto;
 overflow: hidden;
-width: 300px;
+width: 350px;
 height: 0px;
 transition: .5s ease;
 border-radius: 15px;
@@ -174,49 +163,57 @@ border-top-right-radius: 0px;
 border:none;
 /*border: 1px solid red;*/
 }
-#offer h1 a{
+.offer h1 a{
 display: block;
 margin: auto;
 font-family: 'Montserrat', sans-serif;
-
+font-weight: bolder;
 }
-#offer .box img{
+.offer .head-sec{
+padding-top: 35px;
+}
+.offer .box img{
 height: 100px;
 display: block;
 margin: auto;
 padding: 20px;
 }
-#offer p{
+.offer p{
 text-align: center;
 padding: 5px;
-font-size: 1.5rem;
+font-size: 2rem;
 color: #614b4b;
- /* font-family: 'Montserrat', sans-serif;
-font-family: 'Bree Serif', serif;
-font-family: 'Roboto Slab', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Inder', sans-serif;
-font-family: 'Livvic', sans-serif;
-font-family: 'Inder', sans-serif; */
 font-family: 'Andada', serif;
 font-family: 'Livvic', sans-serif;
+font-weight: bolder;
+display: block;
+margin: auto;
+width: 300px;
 
 }
-#offer .box:hover .box2{
+
+.offer .box:hover .box2{
 height: 100px;
 border-radius:10px;
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 }
-#offer .box:hover .box1{
+.offer .box:hover .box1{
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
+background: rgb(238, 238, 27);
+
 
 }
 #offers .box1 .head-sec{
 margin-top: 10px;
 font-weight: bolder;
 }
+#offers .gtco-testimonials .card{
+margin: 0px;
+padding: 0px;
+}
+
 /*Section: Why Choose Us*/
 
 #choose::before{
@@ -225,15 +222,12 @@ position: absolute;
 background: url('https://t3.ftcdn.net/jpg/01/20/42/90/360_F_120429082_EQ7vYrZyR8NBMRuJl5P4AlEEuFlQs2Tw.jpg') no-repeat center center/cover;
 z-index: -3;
 opacity: 100%;
-height: 700px;
+height: 730px;
 width: 100%;
 filter: brightness(50%);
 opacity: 95%;
 }
-#choose{
-/*border: 2px solid green;*/
-/*background-color: #ffffff6b;*/
-}
+
 #chooseus{
 display: flex;
 /*border: 1px solid red;*/
@@ -252,11 +246,6 @@ border-radius: 10px;
 width: 300px;
 }
 
-/*
-#chooseus .box:hover{
-    box-shadow: 0px 0px 0px 3px lightgrey;
-}
-*/
 #chooseus .box img{
 display: block;
 margin: auto;
@@ -401,7 +390,7 @@ color: white;
   --theme-color2: #e89a3d;
 }
 #customer-reviews{
-background-color: #ddd5d6;
+background-color: #ececec;
 height: 600px;
 }
 #testimonial-head{
@@ -409,13 +398,14 @@ width: 70%;
 display: block;
 margin: auto;
 color: #2c0e0e;
-margin-top: 50px;
+margin-top: 30px;
 padding: 30px;
 font-family: 'Montserrat', sans-serif;
-padding-top: 50px;
 font-weight: bolder;
+font-size: 2.5rem;
+padding-top: 50px;
 }
-.test_hr{
+#test_hr{
 background-color: white;
 width: 70%;
 display: block;
@@ -449,7 +439,7 @@ width: 10px;
 border-radius: 50%;
 display: block;
 background: #fff;
-border: 2px solid #01b0f8;
+border: 2px solid #686868;
 margin: 0 5px;
 }
 .gtco-testimonials .owl-dots .active {
@@ -464,7 +454,7 @@ margin-bottom: -1px;
 }
 .gtco-testimonials .card {
 background: #fff;
-box-shadow: 0 8px 30px -7px #c9dff0;
+box-shadow: 0 8px 30px -7px #dfd7d7;
 margin: 0 20px;
 padding: 0 10px;
 border-radius: 20px;
@@ -478,10 +468,11 @@ box-shadow: 0 8px 20px -4px #95abbb;
 width: 100px;
 height: 100px;
 }
-.gtco-testimonials .card h5 {
-color: #01b0f8;
+#customer-reviews .gtco-testimonials .card h5 {
+color: #612929;
 font-size: 21px;
 line-height: 1.3;
+font-weight: bold;
 }
 .gtco-testimonials .card h5 span {
 font-size: 18px;
@@ -541,7 +532,7 @@ position: absolute;
 /*background: url('https://thumbs.dreamstime.com/b/hairdresser-tools-black-background-copy-space-center-123969265.jpg') no-repeat center center/cover ;*/
 background-color: #EEEEEE;
 width: 100%;
-height: 600px;
+height: 900px;
 opacity: 90%;
 z-index: -1;
 }
@@ -705,23 +696,43 @@ margin: 0px;
 }
 
 /*section: Offers*/
-#offer h1{
+
+.offer h1{
     font-size: 2.5rem;
 }
 
-#offer .box1{
-    width: 285px;
+.offer .box1{
     height: 450px;
 }
-#offer .box2{
-    width: 285px;
-}
-#offer  .upper{
+.offer  .upper{
     margin: 5px;
     height: 450px;
 }
-#offer .box{
+.offer .box{
     height: 450px;
+}
+/*testimonials*/
+#testimonial-head{
+    font-size: 3rem;
+}
+#customer-reviews{
+    height: 850px;
+}
+#customer-reviews .gtco-testimonials .card{
+    height: 600px;
+    width: 470px;
+}
+#customer-reviews .gtco-testimonials .card h5{
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+#customer-reviews .gtco-testimonials .card p{
+    font-size: 2rem;
+    margin-top: 20px;
+}
+/* Gallery */
+#gallery_head{
+    font-size: 3rem;
 }
 /*section: Download The App*/
 #app::before{
@@ -748,7 +759,7 @@ margin-left: 19%;
 }
 
 #app::before{
-    height: 1100px;
+    height: 1300px;
 }
 #app .video {
 position: relative;
@@ -772,17 +783,62 @@ height: 570px;
 }
 
 }
-
+/*Numbers*/
+.elementor-column.elementor-col-25, .elementor-column[data-col="25"] {
+width: 100%;
+}
+.elementor-64 .elementor-element.elementor-element-5236c5ba>.elementor-widget-container{
+background-color: transparent;
+}
+.elementor-64 .elementor-element.elementor-element-70d4bfb:not(.elementor-motion-effects-element-type-background), .elementor-64 .elementor-element.elementor-element-70d4bfb>.elementor-motion-effects-container>.elementor-motion-effects-layer{
+background-color: transparent;
+}
+.elementor *, .elementor :after, .elementor :before {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+color: gainsboro;
+/* Numbers */
+font-family: 'Montserrat', sans-serif;
+}
+.elementor-counter .elementor-counter-title {
+text-align: center;
+font-size: 19px;
+font-weight: 400;
+color: white;
+line-height: 2.5;
+}
+.elementor hr{
+margin: 1px;
+background-color: white;
+}
+.elementor-64 .elementor-element.elementor-element-5236c5ba .elementor-counter-title{
+/* text */
+font-family: 'Livvic', sans-serif;
+}
+#test_hr{
+margin: auto;
+height: 2px;
+}
+/* Downloads */
+#download .elementor-row{
+background-color: rgb(59, 57, 57);
+width: 100%;
+}
 /*Gallery*/
 .marq{
 display: inline !important;
 width: 300px;
 height:300px;
 }
+.marq img{
+  height: 300px;
+  width: 300px;
+}
 #gallery_head{
 padding-top: 30px;
 font-size: 2rem;
 padding-bottom: 10px;
+color: #2c0e0e;
 }
 #gal_hr{
 width: 100%;
@@ -790,16 +846,50 @@ display: block;
 margin: auto;
 margin-bottom: 40px;
 margin-top: 0px;
+background-color: white;
+height: 3px;
+}
+.elementor img{
+height: 300px;
 }
 /*Mobile view for Why barbera*/
 @media only screen and (max-width:1000px) {
+/* Offers */
+#offers {
+    height: 850px;
+}
+#offers .head-pri{
+    font-size: 3rem;
+}
+.offer .box{
+    width: 400px;
+    height: 500px;
+}
+.offer .box1{
+    width: 400px;
+    height: 500px;
+}
+.offer .btn_offers{
+    width: 400px;
+}
+.offer .box2{
+    width: 400px;
+}
+
+#offers .box1 .head-sec{
+    font-size: 3rem;
+}
+#offers .gtco-testimonials .card p{
+    font-size: 2rem;
+}
+/*Why Barbera*/
 #chooseus{
       flex-direction: column;
       justify-content: center;
       align-items: center;
 }
 #choose::before{
-    height: 1300px;
+    height: 1400px;
 }
 #chooseus .box h1{
     font-size: 2.5rem;
@@ -813,5 +903,13 @@ margin-top: 0px;
 #chooseus .box{
     width: 70%;
     height: 100%;
+}
+/* Gallery */
+#gallery_head{
+    font-size: 3rem;
+    margin-top: 20px;
+}
+#abt .head-pri{
+    padding-top: 40px;
 }
 }
