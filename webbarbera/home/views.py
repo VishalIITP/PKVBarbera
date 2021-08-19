@@ -15,11 +15,11 @@ from home.models import barberaServices, reviewsModel
 
 
 def registerPage(request):
-    return render(request, 'register.htm')
+    return render(request, 'register.html')
 
 
 def loginPage(request):
-    return render(request, 'login.htm')
+    return render(request, 'login.html')
 
 
 def polls(request):
@@ -27,11 +27,11 @@ def polls(request):
 
 
 def homepage(request):
-    return render(request, 'KHome.htm')
+    return render(request, 'KHome.html')
 
 
 def bookings(request):
-    return render(request, 'bookings.htm')
+    return render(request, 'bookings.html')
 
 
 
@@ -40,28 +40,28 @@ def servicesPage(request):
     context = {'services': allServices}
     
     
-    return render(request, 'servicesPage.htm',context)
+    return render(request, 'servicesPage.html',context)
 
 def contactUsPage(request):
-    return render(request, 'contactUs.htm')
+    return render(request, 'contactUs.html')
 
 
 def tipsPage(request):
-    return render(request, 'tipsPage.htm')
+    return render(request, 'tipsPage.html')
 
 def aboutUs(request):
-    return render(request, 'aboutUs.htm')
+    return render(request, 'aboutUs.html')
 
 
 def myCart(request):
     allServices = barberaServices.objects.all()
     context = {'services': allServices}
-    return render(request, 'myCart.htm', context)
+    return render(request, 'myCart.html', context)
 
 
 def logedinhomepage(request):
 
-    return render(request, 'logedinhomepage.htm', {})
+    return render(request, 'logedinhomepage.html', {})
 
 
 def rate(request):
@@ -82,13 +82,13 @@ def rate(request):
             request, "Thanks for your kind feedback!! ")
 
         return redirect('homepage')
-    return render(request, 'rate.htm')
+    return render(request, 'rate.html')
 
 
 def reviews(request):
     allReviews = reviewsModel.objects.all()
     context = {'allreviews': allReviews}
-    return render(request, 'reviews.htm', context)
+    return render(request, 'reviews.html', context)
 
 
 def createNewUser(request):
@@ -117,7 +117,7 @@ def createNewUser(request):
 
         contextCreateNew = {'successNewUser': True}
 
-        return render(request, 'KHome.htm', contextCreateNew)
+        return render(request, 'KHome.html', contextCreateNew)
 
     else:
         return HttpResponse('404-Not Found Enter Details to create User contact-Us:7945656234')
