@@ -18,7 +18,7 @@
 <!-- Numbers -->
 <meta charset="UTF-8">
 
-<link rel='stylesheet' id='elementor-frontend-legacy-css'
+<!-- <link rel='stylesheet' id='elementor-frontend-legacy-css'
   href='https://www.cheggindia.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.2.4'
   type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-frontend-css'
@@ -38,7 +38,7 @@
   type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-icons-shared-0-css'
   href='https://www.cheggindia.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1'
-  type='text/css' media='all' />
+  type='text/css' media='all' /> -->
 <script type='text/javascript' src='https://www.cheggindia.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1'
   id='jquery-core-js'></script>
 <script type='text/javascript' src='https://www.cheggindia.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
@@ -120,65 +120,50 @@
     </button>
   </div>
 </section>
-<!--Offers-->
+<!-- Deals For You -->
 <section id="offers">
-  <div class="gtco-testimonials">
-    <div class="heading_box">
-      <h1 class="head-pri" width="100%" align="center">DEALS FOR YOU</h1>
-      <hr>
-    </div>
-    <div class="owl-carousel owl-carousel1 owl-theme offer">
-
-      <div>
-        <div class="card text-center box">
-          <div class="box1">
-            <h1 class="head-sec" align="center"><a>30%</a><a>Discount</a></h1>
-            <p align="center">Earn upto 30% Discount on Wedding Packages.</p>
-          </div>
-          <div class="box2">
-            <button class="btn_offers">FIND MORE</button>
-          </div>
-        </div>
-
-      </div>
-      <div>
-        <div class="card text-center box">
-          <div class="box1">
-            <h1 class="head-sec" align="center"><a>30%</a><a>Discount</a></h1>
-            <p align="center">Earn upto 30% Discount on Wedding Packages.</p>
-          </div>
-          <div class="box2">
-            <button class="btn_offers">FIND MORE</button>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="card text-center box">
-          <div class="box1">
-            <h1 class="head-sec" align="center">Earn Barbera Points</h1>
-            <p align="center">Refer and earn upto 100 Barbera Points.</p>
-          </div>
-          <div class="box2">
-            <button class="btn_offers">FIND MORE</button>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="card text-center box">
-          <div class="box1">
-            <h1 class="head-sec" align="center">Special Packages</h1>
-            <p align="center">Get upto 50% Discount on special packages.</p>
-          </div>
-          <div class="box2">
-            <button class="btn_offers">FIND MORE</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="heading_box">
+    <h1 class="head-pri deal_head" width="100%" align="center">DEALS FOR YOU</h1>
+    <hr>
+    <img src="static/images/spofferrb.png" alt="Deals For You" srcset="" class="deal_img">
   </div>
-  <div style="text-align: right;margin-right: 10px; margin-bottom: 100px; font-size: 1.2rem;">*T&C Apply</div>
-</section>
-
+  <div class="device offer">
+    <a class="arrow-left" href="#"></a>
+    <a class="arrow-right" href="#"></a>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide" height="500px">
+          <div class="content-slide">
+            <img src="static/images/offer1.jpg" alt="" srcset="" width="400px" height="400px">  
+            <button class="btn_offers">FIND MORE</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-slide">
+            <img src="static/images/offer2.jpg" alt="" srcset="" width="400px" height="400px">  
+            <button class="btn_offers">FIND MORE</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-slide">
+            <img src="static/images/offer3.jpg" alt="" srcset="" width="400px" height="400px">  
+            <button class="btn_offers">FIND MORE</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-slide">
+            <img src="static/images/offer4.png" alt="" srcset="" width="400px" height="400px">  
+            <button class="btn_offers">FIND MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="pagination"></div>
+  </div>
+  </section>
+  
 
 
 <!--Why Barbera-->
@@ -867,7 +852,7 @@
     })();
 
   </script>
-  <!--Numbers counting-->
+  <!--Numbers counting JS-->
   <script type='text/javascript' src='https://www.cheggindia.com/wp-includes/js/wp-embed.min.js?ver=5.7.2'
     id='wp-embed-js'></script>
   <script type='text/javascript'
@@ -927,6 +912,29 @@
     var jetElements = { "ajaxUrl": "https:\/\/www.cheggindia.com\/wp-admin\/admin-ajax.php", "isMobile": "false", "templateApiUrl": "https:\/\/www.cheggindia.com\/wp-json\/jet-elements-api\/v1\/elementor-template", "devMode": "false", "messages": { "invalidMail": "Please specify a valid e-mail" } };
 /* ]]> */
   </script>
+
+ <!-- Deals for you JS-->
+ <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/2.7.6/idangerous.swiper.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+     <script id="rendered-js" >
+var mySwiper = new Swiper('.swiper-container', {
+ pagination: '.pagination',
+ loop: true,
+ autoplay: 1000,
+ paginationClickable: true });
+
+$('.swiper-container').on('mouseenter', function (e) {
+ console.log('stop autoplay');
+ mySwiper.stopAutoplay();
+});
+$('.swiper-container').on('mouseleave', function (e) {
+ console.log('start autoplay');
+ mySwiper.startAutoplay();
+});
+//# sourceURL=pen.js
+   </script>
 
 
 
