@@ -952,8 +952,11 @@ height: 300px;
 @media only screen and (max-width:1000px) {
 /* Offers */
 #offers {
-    height: 750px;
+    height: 1000px;
     flex-direction: column;
+}
+#offers::before{
+    height: 1000px;
 }
 #offers .head-pri{
     font-size: 3rem;
@@ -978,32 +981,47 @@ height: 300px;
     color: rgb(255, 255, 255);
     margin: auto;
 }
+#offers img{
+    width: 600px;
+    height: 600px;
+}
+
 .deal_head{
     display: block;
 }
 .deal_img{
     display: none;
 }
-.offer .box{
-    width: 400px;
-    height: 500px;
-}
-.offer .box1{
-    width: 400px;
-    height: 500px;
-}
+.device {
+    width: 640px;
+    height: 720px;
+  }
+  .swiper-container {
+    height: 720px;
+    width: 640px;
+  }
+  .content-slide {
+    height: 720px;
+  }
+  .swiper-slide{
+      height: 720px;
+  }
+  .swiper-wrapper{
+      height: 720px;
+  }
+
 .offer .btn_offers{
     width: 400px;
-}
-.offer .box2{
-    width: 400px;
-}
-
-#offers .box1 .head-sec{
-    font-size: 3rem;
+    margin-top: 20px;
+    height: 50px;
+    margin-bottom: 0px;
+    font-size: 1.5rem;
 }
 #offers .gtco-testimonials .card p{
     font-size: 2rem;
+}
+.pagination{
+    margin-top: 5px;
 }
 /*Why Barbera*/
 #chooseus{
