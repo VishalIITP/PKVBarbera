@@ -270,7 +270,7 @@ transform: rotate(45deg) translate(-8px, -8px);
   }
   .nav_icon{
       width: 100%;
-      padding: 20px;
+      padding: 20px 0px;
       margin: 2px;
   }
   .logo{
