@@ -1,6 +1,9 @@
-{% extends "base.html" %} {% load static%} {% block title%}Home-Barbera{%
-endblock title%} {% block activateTipsPage %}current{% endblock activateTipsPage
-%} {%block csslink%}
+{% extends "base.html" %} 
+{% load static%} 
+{% block title%}Home-Barbera{%endblock title%} 
+{% block activateTipsPage %}current{% endblock activateTipsPage%}
+
+ {%block csslink%}
 <link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css" />
 
 <!-- Bootstrap CSS from CDN -->
@@ -22,7 +25,8 @@ endblock title%} {% block activateTipsPage %}current{% endblock activateTipsPage
 />
 <link rel="stylesheet" href="{% static 'css/styletips.css' %}" />
 
-{% endblock csslink%} {% block body%}
+{% endblock csslink%} 
+{% block body%}
 
 <section id="slide_show">
   <div class="container">

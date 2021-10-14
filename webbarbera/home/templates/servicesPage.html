@@ -26,8 +26,8 @@
     <div id="ser">
         <!--Male-->
         <div class="box" id="male_salon">
-            <br />
-            <br />
+            <br>
+            <br>
 
             <h class="head-pri">Men's salon</h>
 
@@ -41,7 +41,7 @@
                         <p>{{x.serviceName}}</p>
 
                         <p id="price{{forloop.counter}}mainstrike">
-                            <strike id="price{{forloop.counter}}mainstrikechanger"></strike>
+                            <strike id="price{{forloop.counter}}mainstrikechanger"> {{x.serviceSubCategory1Price}}</strike>
                             <font style="color: red"> {{x.serviceCategoryDiscount}}%off</font>
                         </p>
                         <p id="price{{forloop.counter}}main">
@@ -99,8 +99,7 @@
 
         <!--Female-->
         <div class="box" id="female_salon">
-            <br />
-            <br />
+            <br><br>
 
             <h class="head-pri">Women's salon</h>
 
@@ -173,8 +172,7 @@
 
         <!--Wedding-->
         <div class="box" id="wed_salon">
-            <br />
-            <br />
+            <br><br>
 
             <h class="head-pri">Wedding Packages</h>
 
@@ -247,8 +245,7 @@
 
         <!--Kids-->
         <div class="box" id="kids_salon">
-            <br />
-            <br />
+            <br><br>
 
             <h class="head-pri">Kid's Section</h>
 
@@ -339,7 +336,7 @@
 
         var desccategorypriceId = dps.id + "desccategoryprice";
         var pr = document.getElementById(desccategorypriceId).innerText;
-        document.getElementById(mainpriceId).innerText = Number(pr) - Number(pr);
+        document.getElementById(mainpriceId).innerText = Number(pr) - Number(pr)*20/100;
         document.getElementById(mainpricestrikeId).innerText = pr;
     }
 

@@ -1,6 +1,14 @@
 {%extends 'admin/base.html'%}
 {% load static %}
 
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock extrastyle %} 
+ 
+
+ 
+
+
 {% block title%}Administration-Barbera{% endblock title%}
 
 {% block branding%}
@@ -10,17 +18,6 @@
 
 
 {% endblock branding %}
-{% comment %} 
-{% block extrastyle %}
-<link rel="stylesheet" href="{% static 'css/adminPanel.css' %}"
-{% endblock extrastyle %} 
- {% endcomment %}
-
- 
-
- 
-
-{% block body%}
 
 
-{% endblock body %}
+  

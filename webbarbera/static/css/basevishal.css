@@ -9,12 +9,11 @@
 /*Login Button*/
 
 #LoginSubmitBut {
-  background-color: black;
+  /* background-color: black; */
   color: white;
   font-size: 20px;
-  width: 20px;
-  border-radius: 15px;
-  padding: auto;
+  width: auto;
+  border-radius: 10px;
   border: 2px solid black;
 }
 
