@@ -461,7 +461,9 @@ section {
     float: left;
     z-index: 1;
 }
-
+.head h2{
+  text-align: center;
+}
 @media (max-width: 767px) and (min-width: 300px)
 {
 .why_barbera {
@@ -577,6 +579,7 @@ margin-bottom: 40px;
 width: 97%;
 }
 @media (max-width: 767px) and (min-width: 300px)
+{
 .trained {
     padding: 0;
     margin-bottom: 0;
@@ -587,8 +590,9 @@ width: 97%;
     max-width: 320px;
     height: 400px;
 }
-
+}
 @media (max-width: 767px) and (min-width: 300px)
+{
 .imag {
     width: 100%;
     height: auto;
@@ -601,6 +605,7 @@ width: 97%;
     float: left;
     -webkit-box-shadow: 2px 2px 10px rgb(0 0 0 / 50%);
     box-shadow: 2px 2px 10px rgb(0 0 0 / 50%);
+}
 }
 .imag img{
 /*    transition: all 0.5s ease;
@@ -666,6 +671,7 @@ width: 97%;
   margin-bottom: 30px;
 }
 @media (max-width: 767px) and (min-width: 300px)
+{
 .sanitation {
     padding: 0;
     margin-bottom: 0;
@@ -682,6 +688,7 @@ width: 97%;
   font-weight: 300;
   display: block;
   margin-bottom: 30px;
+}
 }
 /* --------------------------------
 
