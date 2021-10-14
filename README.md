@@ -5,14 +5,14 @@ App requirements to run
 
 Steps to run the app:
 1. Go to the directory where manage.py file is located <PKVBarbera/webbarbera>.
-2. To have the superuser access use the command <python3 manage.py createsuperuser>.
-3. To the run the server use the command <python3 manage.py runserver>.
+2. To the run the server use the command <python3 manage.py runserver>.
+3. To have the superuser access use the command <python3 manage.py createsuperuser>.
   
   
   
   
   Developers:
-  Padmaja
-  Kartikay
-  Vishal
+  Padmaja ()
+  Kartikay ()
+  Vishal (vishaliitp64@gmail.com mob-8795972438) 
   
