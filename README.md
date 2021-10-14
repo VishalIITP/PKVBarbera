@@ -14,5 +14,5 @@ Steps to run the app:
   Developers:
   Padmaja
   Kartikay
-  Vishal
+  Vishal vishaliitp64@gmail.com mob-8795972438 
   
