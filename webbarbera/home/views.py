@@ -53,6 +53,12 @@ def aboutUs(request):
     return render(request, 'aboutUs.html')
 
 
+
+def faqsPage(request):
+    return render(request, 'faq.html')
+
+
+
 def myCart(request):
     allServices = barberaServices.objects.all()
     context = {'services': allServices}

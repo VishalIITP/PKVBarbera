@@ -198,16 +198,16 @@ body{
     }
    
     #ser .book_now_btn{
-        background-color: rgb(238, 29, 29);
+        background-color: #535151;
     }
     #ser .book_now_btn:hover{
-        background-color: rgb(168, 12, 12);
+        background-color: #535151;
     }
     #ser .cart_btn{
-        background-color: rgb(19, 170, 19);
+        background-color: #535151;
     }
     #ser .cart_btn:hover{
-        background-color: green;
+        background-color: #535151;
     }
     #ser .icon_text p{
         display: block;
@@ -233,13 +233,13 @@ body{
     height: 2rem;
     margin: 5px 5px;
     font-size: 1rem;
-    background-color: rgb(43, 140, 179);
+    background-color: #535151;
     color: white;
     border-radius: 5px;
     border:none;
 }
 #ser .var_btn:hover{
-    background-color: rgb(16, 123, 165);
+    background-color: #535151;
 }
 #ser .variety_btn{
     display: flex;

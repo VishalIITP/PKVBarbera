@@ -12,6 +12,7 @@ urlpatterns = [
     path('servicesPage', views.servicesPage, name='servicesPage'),
     path('tipsPage', views.tipsPage, name='tipsPage'),
     path('contactUsPage', views.contactUsPage, name='contactUsPage'),
+    path('faqsPage', views.faqsPage, name='faqsPage'),
 
     path('register', views.registerPage, name='registration'),
     path('login', views.loginPage, name='login'),

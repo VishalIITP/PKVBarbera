@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block title%}FAQs-Barbera{% endblock title%}
+
+
+
+
+
+{% block activateHome %}current{% endblock activateHome %}
+
+
+{%block csslink%}
+ <link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <link rel="stylesheet" href="{% static 'css/stylefaq.css'%}">
+
+{% endblock csslink%}
+
+{%block scriptlink%}
+
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+
+{% endblock scriptlink%}
+
+{% block body%}
+
+
+
+       
+      <div class="svg-wrapper">
+    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+      <rect class="shape" height="60" width="320" />
+    </svg>
+     <div class="texth">Frequently Asked Questions</div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <a>What can JavaScript Do?</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>How JavaScript Can Modify HTML and CSS Values?</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>What Is SVG?</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Is FAQ Section Matters In Website?</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>How To Create a Light FAQ Element?</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+  </div>
+ 
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script  src="function.js"></script>
+  <!--Navigation bar-->
+  <script>
+
+ 
+      //To change Burger icon to cross
+      function myFunction(x) {
+          x.classList.toggle("change");
+      }
+      //Navigation Bar for mobiles and table
+      burger = document.querySelector('.burger')
+      navbar = document.querySelector('.navbar')
+      navList = document.querySelector('.nav-list')
+
+      burger.addEventListener('click', ()=>{
+      navList.classList.toggle('v-class-resp');
+      navbar.classList.toggle('h-nav-resp');
+      })
+</script>
+<!--back to top-->
+<script>
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+scrollFunction();
+};
+
+function scrollFunction() {
+if (
+  document.body.scrollTop > 20 ||
+  document.documentElement.scrollTop > 20
+) {
+  mybutton.style.display = "block";
+} else {
+  mybutton.style.display = "none";
+}
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+</script>
+<!--Section: slide_show-->
+<script>
+  // Created by webdevpuneet.com
+
+(function($) {
+//Function to animate slider captions
+function doAnimations(elems) {
+//Cache the animationend event in a variable
+var animEndEv = "webkitAnimationEnd animationend";
+
+elems.each(function() {
+var $this = $(this),
+  $animationType = $this.data("animation");
+$this.addClass($animationType).one(animEndEv, function() {
+  $this.removeClass($animationType);
+});
+});
+}
+
+//Variables on page load
+var $myCarousel = $("#carouselExampleIndicators"),
+$firstAnimatingElems = $myCarousel
+.find(".carousel-item:first")
+.find("[data-animation ^= 'animated']");
+
+//Initialize carousel
+$myCarousel.carousel();
+
+//Animate captions in first slide on page load
+doAnimations($firstAnimatingElems);
+
+//Other slides to be animated on carousel slide event
+$myCarousel.on("slide.bs.carousel", function(e) {
+var $animatingElems = $(e.relatedTarget).find(
+"[data-animation ^= 'animated']"
+);
+doAnimations($animatingElems);
+});
+})(jQuery);
+</script>
+<script>
+  // Code By Webdevtrick ( https://webdevtrick.com )
+  const items = document.querySelectorAll(".accordion a");
+
+  function toggleAccordion(){
+    this.classList.toggle('active');
+    this.nextElementSibling.classList.toggle('active');
+  }
+
+  items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+ 
+
+  {% endblock body%}
+
