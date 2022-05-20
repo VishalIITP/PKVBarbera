@@ -14,5 +14,5 @@ Steps to run the app:
   Developers:
  * Padmaja ()
  * Kartikay (kartikay.gupta2002@gmail.com 7007222154)
- * Vishal (vishaliitp64@gmail.com mob-8795972438) 
+ * Vishal (vishaliitp64@gmail.com mob-8303541949) 
   
